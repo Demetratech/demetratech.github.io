@@ -1,47 +1,115 @@
-
 <!doctype html>
 <html amp lang="en" itemscope itemtype="http://schema.org/WebSite">
+
 <head>
   <meta charset="utf-8">
   <link rel="canonical" href="http://demetratech.github.io/index.html" />
   <link rel='shortcut icon' type='image/x-icon' href='http://demetratech.github.io/favicon.ico' />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
   <title>Demetratech - Web for the vintage world</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
   <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
   <script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "WebSite",
-    "headline": "Demetratech web services",
-    "datePublished": "2016-04-05T08:00:00+08:00",
-    "dateModified": "2016-04-05T09:20:00+08:00",
-    "author": {
-      "@type": "Person",
-      "name": "Laura Camellini"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Demetratech",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://demetratech.github.io/logo_dt.jpg",
-        "width": 200,
-        "height": 60
-      }
-    },
-    "description": "Demetratech, web for the wintage world"
-  }
+    { "@context": "http://schema.org", "@type": "WebSite", "headline": "Demetratech web services", "datePublished": "2016-04-05T08:00:00+08:00", "dateModified": "2016-04-05T09:20:00+08:00", "author": { "@type": "Person", "name": "Laura Camellini" }, "publisher":
+    { "@type": "Organization", "name": "Demetratech", "logo": { "@type": "ImageObject", "url": "https://demetratech.github.io/logo_dt.jpg", "width": 200, "height": 60 } }, "description": "Demetratech, web for the wintage world" }
   </script>
-  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <style amp-boilerplate>
+    body {
+      -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      animation: -amp-start 8s steps(1, end) 0s 1 normal both
+    }
+    
+    @-webkit-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+      to {
+        visibility: visible
+      }
+    }
+    
+    @-moz-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+      to {
+        visibility: visible
+      }
+    }
+    
+    @-ms-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+      to {
+        visibility: visible
+      }
+    }
+    
+    @-o-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+      to {
+        visibility: visible
+      }
+    }
+    
+    @keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+      to {
+        visibility: visible
+      }
+    }
+  </style>
+  <noscript>
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: none;
+        -moz-animation: none;
+        -ms-animation: none;
+        animation: none
+      }
+    </style>
+  </noscript>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <style>
-    html, body {
+    * {
+      box-sizing: border-box;
+    }
+    
+    .row {
+      width: 100%;
+    }
+    
+    .row::after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+    
+    [class*="col-"] {
+      float: left;
+      padding: 15px;
+    }
+    
+    html,
+    body {
       overflow: hidden;
     }
+    
     body {
       font-family: 'Questrial', Arial;
     }
-    body, viewer {
+    
+    body,
+    viewer {
       position: absolute;
       top: 0;
       left: 0;
@@ -51,9 +119,15 @@
       margin: 0;
       padding: 0;
     }
+    
     viewer {
       background: #fff;
     }
+    
+    #visibilityToggle {
+      display: none;
+    }
+    
     header {
       position: absolute;
       z-index: 1;
@@ -61,47 +135,101 @@
       left: 0;
       right: 0;
       height: 60px;
-      background: #fadcdc;
-      opacity: 0.7;
+      background-color: rgba(250, 220, 220, .7);
       color: #c73838;
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
       align-items: center;
       padding: 0 8px;
+      box-shadow: rgba(150,15,17,0.15) 1px 1px 14px;
     }
-    
-    .menu-right {
-      position: absolute;
-      top:1.5em;
-      right:1em;
-      padding-right:.5em;
-    }
-    
+  
     .menu-right a:hover {
-      color:#6e0f11;
+      color: #700f11;
     }
-
-    @media screen and (min-width: 500px) {
+    
+    @media screen and (min-width: 769px) {
+      
       header {
-        height: 64px;
+        height: 60px;
+      }
+      
+      .menu-right {
+       padding-top:2.3em; 
+      }
+      .col-1 {
+        width: 8.33%;
+      }
+      .col-2 {
+        width: 16.66%;
+      }
+      .col-3 {
+        width: 25%;
+      }
+      .col-4 {
+        width: 33.33%;
+      }
+      .col-5 {
+        width: 41.66%;
+      }
+      .col-6 {
+        width: 50%;
+      }
+      .col-7 {
+        width: 58.33%;
+      }
+      .col-8 {
+        width: 66.66%;
+      }
+      .col-9 {
+        width: 75%;
+      }
+      .col-10 {
+        width: 83.33%;
+      }
+      .col-11 {
+        width: 91.66%;
+      }
+      .col-12 {
+        width: 100%;
       }
     }
+    
+    @media screen and (max-width: 768px) {
+      
+      [class*="col-"] {
+        width: 100%;
+      }
+      
+      header{
+        height:9.4em;
+      }
+      
+      header .row {
+        text-align:center;
+      }
+    }
+    
     header h1 {
       font-size: 22px;
       flex-grow: 1;
     }
+    
     header .show-container-anchor {
       flex-grow: 0;
       flex-shrink: 0;
       padding: 8px;
-      cursor:pointer;
+      padding-bottom: 1.3em;
+      cursor: pointer;
     }
+    
     header #visibilityToggle {
       flex-grow: 0;
       flex-shrink: 0;
       padding: 8px;
     }
+    
     .wait {
       position: absolute;
       z-index: 3;
@@ -109,6 +237,7 @@
       left: 20px;
       font-size: 12px;
     }
+    
     container {
       position: absolute;
       top: 0;
@@ -118,37 +247,47 @@
       overflow-x: hidden;
       visibility: hidden;
     }
+    
     viewer[data-show-container="1"] #container1 {
       visibility: visible;
     }
+    
     viewer[data-show-container="1"] #show-container1-anchor {
-      text-decoration: underline;
+      border-bottom: 2px solid #c73838;
     }
+    
     viewer[data-show-container="2"] #container2 {
       visibility: visible;
     }
+    
     viewer[data-show-container="2"] #show-container2-anchor {
-      text-decoration: underline;
+      border-bottom: 2px solid #c73838;
     }
+    
     viewer[data-show-container="3"] #container3 {
       visibility: visible;
     }
+    
     viewer[data-show-container="3"] #show-container3-anchor {
-      text-decoration: underline;
+      border-bottom: 2px solid #c73838;
     }
+    
     viewer.natural container {
       overflow-y: hidden;
     }
+    
     viewer.virtual container {
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
     }
+    
     container iframe {
       border: 0;
       margin: 0;
       padding: 0;
       width: 100%;
     }
+    
     viewer.natural container iframe {
       height: 100%;
     }
@@ -159,12 +298,13 @@
   <script>
     var SENTINEL = '__AMP__';
     var allViewers = [];
+
     function Viewer(containerId, id, url, visible) {
       this.id = id;
       this.url = url;
       this.alreadyLoaded_ = false;
       this.stackIndex_ = 0;
-      this.viewportType_ = 'natural';  // "natural" or "virtual"
+      this.viewportType_ = 'natural'; // "natural" or "virtual"
       this.visibilityState_ = visible ? 'visible' : 'hidden';
       this.prerenderSize_ = 1;
       this.isIos_ = /iPhone|iPad|iPod/i.test(window.navigator.userAgent);
@@ -187,7 +327,8 @@
       this.viewer.classList.add(this.viewportType_);
       if (this.viewportType_ == 'natural' && !this.isIos_) {
         this.iframe.setAttribute('scrolling', 'yes');
-      } else {
+      }
+      else {
         this.iframe.setAttribute('scrolling', 'no');
       }
       if (this.viewportType_ == 'virtual') {
@@ -201,9 +342,9 @@
       var params = {
         history: 1,
         viewportType: this.viewportType_,
-        width: this.container./*OK*/offsetWidth,
-        height: this.container./*OK*/offsetHeight,
-        paddingTop: this.header./*OK*/offsetHeight,
+        width: this.container. /*OK*/ offsetWidth,
+        height: this.container. /*OK*/ offsetHeight,
+        paddingTop: this.header. /*OK*/ offsetHeight,
         visibilityState: this.visibilityState_,
         prerenderSize: this.prerenderSize_,
         viewerorigin: parseUrl(window.location.href).origin,
@@ -227,7 +368,7 @@
       setTimeout(function() {
         this.iframe.style.visibility = 'hidden';
         if (this.viewportType_ == 'virtual') {
-          this.iframe.style.height = this.container./*OK*/offsetHeight + 'px';
+          this.iframe.style.height = this.container. /*OK*/ offsetHeight + 'px';
         }
         this.iframe.style.display = '';
         this.iframe.setAttribute('src', url);
@@ -239,14 +380,14 @@
       var targetOrigin = this.frameOrigin_;
       var listener = function(event) {
         if (event.origin == targetOrigin &&
-                event.data == 'amp-handshake-request' &&
-                (!event.source || event.source == target)) {
+          event.data == 'amp-handshake-request' &&
+          (!event.source || event.source == target)) {
           log('Viewer ' + this.id + ' messaging established with ',
-              targetOrigin);
+            targetOrigin);
           window.removeEventListener('message', listener, false);
-          target./*OK*/postMessage('amp-handshake-response', targetOrigin);
+          target. /*OK*/ postMessage('amp-handshake-response', targetOrigin);
           this.messaging_ = new ViewerMessaging(target, targetOrigin,
-              this.processRequest_.bind(this), targetId);
+            this.processRequest_.bind(this), targetId);
           this.sendRequest_('visibilitychange', {
             state: this.visibilityState_,
             prerenderSize: this.prerenderSize
@@ -281,7 +422,7 @@
       this.iframe.contentWindow.onbeforeunload = (function() {
         this.container.style.paddingTop = '120px';
         this.container.textContent =
-            'Unload of the AMP iframe is not allowed!';
+          'Unload of the AMP iframe is not allowed!';
       }).bind(this);
     };
     Viewer.prototype.documentReady_ = function() {
@@ -293,25 +434,25 @@
       log('AMP document height:', documentHeight);
       if (this.viewportType_ == 'virtual') {
         this.iframe.style.height = Math.max(documentHeight,
-            this.container./*OK*/offsetHeight) + 'px';
+          this.container. /*OK*/ offsetHeight) + 'px';
       }
       return Promise.resolve();
     };
     Viewer.prototype.onScroll_ = function() {
       this.sendRequest_('viewport', {
-        scrollTop: this.container./*OK*/scrollTop
+        scrollTop: this.container. /*OK*/ scrollTop
       }, false);
     };
     Viewer.prototype.onResize_ = function() {
-      log('Resized to ', this.container./*OK*/offsetWidth,
-          this.container./*OK*/offsetHeight,
-          this.header./*OK*/offsetHeight,
-          this.container./*OK*/scrollTop);
+      log('Resized to ', this.container. /*OK*/ offsetWidth,
+        this.container. /*OK*/ offsetHeight,
+        this.header. /*OK*/ offsetHeight,
+        this.container. /*OK*/ scrollTop);
       this.sendRequest_('viewport', {
-        scrollTop: this.container./*OK*/scrollTop,
-        width: this.container./*OK*/offsetWidth,
-        height: this.container./*OK*/offsetHeight,
-        paddingTop: this.header./*OK*/offsetHeight
+        scrollTop: this.container. /*OK*/ scrollTop,
+        width: this.container. /*OK*/ offsetWidth,
+        height: this.container. /*OK*/ offsetHeight,
+        paddingTop: this.header. /*OK*/ offsetHeight
       }, false);
     };
     Viewer.prototype.requestFullOverlay_ = function() {
@@ -355,7 +496,7 @@
     };
     Viewer.prototype.updateVisibilityToggle_ = function() {
       this.visibilityToggle_.textContent = this.visibilityState_ == 'visible' ?
-          'Visible' : 'Prerendering';
+        'Visible' : 'Prerendering';
     };
     Viewer.prototype.broadcast_ = function(message) {
       log('broadcast: ', message);
@@ -399,11 +540,13 @@
       }
       return this.messaging_.sendRequest(type, data, awaitResponse);
     };
+
     function log() {
       var var_args = Array.prototype.slice.call(arguments, 0);
       var_args.unshift('[VIEWER]');
-      console/*OK*/.log.apply(console, var_args);
+      console /*OK*/ .log.apply(console, var_args);
     }
+
     function parseUrl(urlString) {
       var a = document.createElement('a');
       a.href = urlString;
@@ -419,6 +562,7 @@
         origin: a.protocol + '//' + a.host
       };
     }
+
     function paramsStr(params) {
       var s = '';
       for (var k in params) {
@@ -433,33 +577,36 @@
       }
       return s;
     }
+
     function loadAmpDoc() {
       new Viewer(
-          'container1',
-          '1',
-          './carousel.html',
-          true).start();
+        'container1',
+        '1',
+        './carousel.html',
+        true).start();
       addShowContainer('1');
       new Viewer(
-          'container2',
-          '2',
-          './projects.html',
-          false).start();
+        'container2',
+        '2',
+        './projects.html',
+        false).start();
       addShowContainer('2');
       new Viewer(
-          'container3',
-          '3',
-          './contact.html',
-          false).start();
+        'container3',
+        '3',
+        './contact.html',
+        false).start();
       addShowContainer('3');
       showContainer('1');
     }
+
     function addShowContainer(id) {
       var anchor = document.getElementById('show-container' + id + '-anchor');
       anchor.onclick = function() {
         showContainer(id);
       };
     }
+
     function showContainer(id) {
       log('Show container: ', id);
       var viewerEl = document.querySelector('viewer');
@@ -471,16 +618,20 @@
     window.onload = loadAmpDoc;
   </script>
 </head>
+
 <body>
   <viewer>
-    <header>
-      <amp-img src="logo.png" width="200" height="56" noloading></amp-img>
-      <div class="menu-right">
-        <a class="show-container-anchor" id="show-container1-anchor">Home</a>
-        <a class="show-container-anchor" id="show-container2-anchor">Projects</a>
-        <a class="show-container-anchor" id="show-container3-anchor">Contact</a>
-        <span>|</span>
-        <a id="visibilityToggle">Visible</a>
+    <header layout="container">
+      <div class="row">
+        <div class="col-6">
+          <amp-img src="logo.png" width="200" height="56" noloading></amp-img>
+        </div>
+        <div class="menu-right col-6" layout="responsive" style="text-align:center;">
+          <a class="show-container-anchor" id="show-container1-anchor">Home</a>
+          <a class="show-container-anchor" id="show-container2-anchor">Projects</a>
+          <a class="show-container-anchor" id="show-container3-anchor">Contact</a>
+          <a id="visibilityToggle">Visible</a>
+        </div>
       </div>
     </header>
     <container id="container1">
@@ -500,4 +651,5 @@
     </container>
   </viewer>
 </body>
+
 </html>

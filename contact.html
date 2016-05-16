@@ -2416,25 +2416,6 @@
                      });*/
 
             
-            //always subscribe to ready event and implement widget related code
-                //inside callback function , it is the best practice while developing widgets
-                JFCustomWidget.subscribe("ready", function(){
-                 
-                    //subscribe to form submit event
-                    JFCustomWidget.subscribe("submit", function(){
-						
-						
-                    encrypto();
-                        var msg = {
-                            //you should valid attribute to data for JotForm
-                            //to be able to use youw widget as required
-                            valid: false,
-                            value: document.getElementById('commentpgp').value
-                        }
-                        // send value to JotForm
-                        JFCustomWidget.sendSubmit(msg);
-                    });
-                });
             function encrypto()
             {
 
