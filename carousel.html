@@ -9,6 +9,7 @@
     <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
     <style amp-boilerplate>
         body {
@@ -87,7 +88,6 @@
         .color {
             color: #700f11;
         }
-        
         /* Carousel */
         
         .amp-carousel-button {
@@ -100,7 +100,6 @@
             top: 25%;
             width: 400px;
         }
-        
         /* title slide 1 */
         
         .caption-title {
@@ -184,7 +183,6 @@
         .ot-letter-left:hover span:after {
             color: #fff;
         }
-        
         /* title slide 2 */
         
         .caption-title-1 {
@@ -270,10 +268,28 @@
         }
         
         .caption p {
-            font-size:1.2em;
+            font-size: 1.2em;
             line-height: 1.5em;
         }
+        /* Accordion */
         
+        section[expanded] h1.toggle:after {
+            font-weight: bold;
+            content: 'Hide';
+        }
+        
+        section:not([expanded]) h1.toggle:after {
+            content: 'Portfolio and clients';
+        }
+        
+        section[expanded] h1.toggle1:after {
+            font-weight: bold;
+            content: 'Hide';
+        }
+        
+        section:not([expanded]) h1.toggle1:after {
+            content: 'Photography';
+        }
     </style>
     <amp-carousel width=960 height=450 layout=responsive type=slides controls autoplay delay="8000">
         <div class="inner-slide">
@@ -281,17 +297,11 @@
             </amp-img>
             <div class="caption" layout="responsive">
                 <ul class="caption-title">
-                    <li class="ot-letter-left"><span data-letter="D">D</span></li>
-                    <li class="ot-letter-left"><span data-letter="E">E</span></li>
-                    <li class="ot-letter-left"><span data-letter="M">M</span></li>
-                    <li class="ot-letter-left"><span data-letter="E">E</span></li>
-                    <li class="ot-letter-left"><span data-letter="T">T</span></li>
-                    <li class="ot-letter-left"><span data-letter="R">R</span></li>
                     <li class="ot-letter-left"><span data-letter="A">A</span></li>
+                    <li class="ot-letter-left"><span data-letter="B">B</span></li>
+                    <li class="ot-letter-left"><span data-letter="O">O</span></li>
+                    <li class="ot-letter-left"><span data-letter="U">U</span></li>
                     <li class="ot-letter-left"><span data-letter="T">T</span></li>
-                    <li class="ot-letter-left"><span data-letter="E">E</span></li>
-                    <li class="ot-letter-left"><span data-letter="C">C</span></li>
-                    <li class="ot-letter-left"><span data-letter="H">H</span></li>
                 </ul>
                 <p style="text-align:center;">
                     Today <b>Demetratech</b> creates design websites built on advanced <span class="color">Open Source</span> technologies
@@ -313,24 +323,39 @@
                     <li class="ut-letter-left"><span data-letter="T">T</span></li>
                 </ul>
                 <p style="text-align:center;">
-                    Our project is to create specific <b>e-commerce</b> platforms for <span class="color">vintage</span>  products, aimed at <span class="color">general public</span> and <span class="color">commercial operators</span>.
+                    Our project is to create specific <b>e-commerce</b> platforms for <span class="color">vintage</span> products, aimed at <span class="color">general public</span> and <span class="color">commercial operators</span>.
                 </p>
             </div>
         </div>
     </amp-carousel>
+    <br />
+    <br />
+    <amp-accordion>
+        <section>
+            <h1 class="toggle"></h1>
+            <amp-carousel width=auto height=158 controls>
 
-    <amp-carousel width=auto height=600 controls>
+                <amp-img src="img/clients/privacy.jpg" width=202 height=158>
+                </amp-img>
 
-        <amp-img src="https://lh3.googleusercontent.com/pSECrJ82R7-AqeBCOEPGPM9iG9OEIQ_QXcbubWIOdkY=w400-h300-no-n" width=400 height=300>
-        </amp-img>
+                <amp-img src="img/clients/moodle.png" width=202 height=158>
+                </amp-img>
 
-        <amp-img src="https://lh3.googleusercontent.com/5rcQ32ml8E5ONp9f9-Rf78IofLb9QjS5_0mqsY1zEFc=w400-h300-no-n" width=400 height=300>
-        </amp-img>
+                <amp-img src="img/clients/golinelli.jpg" width=202 height=158>
+                </amp-img>
 
-        <amp-img src="https://lh3.googleusercontent.com/Z4gtm5Bkxyv21Z2PtbTf95Clb9AE4VTR6olbBKYrenM=w400-h300-no-n" width=400 height=300>
-        </amp-img>
+                <amp-img src="img/clients/penny.png" width=202 height=158>
+                </amp-img>
 
-    </amp-carousel>
+                <amp-img src="img/clients/mail.png" width=202 height=158>
+                </amp-img>
+                
+                <amp-img src="img/clients/ravera-portfolio.png" width=202 height=158>
+                </amp-img>
+            </amp-carousel>
+        </section>
+    </amp-accordion>
+    
     <footer>
         <ul>
             <li><a href="https://github.com/ampproject/amp-by-example/issues/new">Home Page</a></li>
