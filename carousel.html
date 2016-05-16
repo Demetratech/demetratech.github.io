@@ -72,23 +72,251 @@
                 animation: none
             }
         </style>
+
     </noscript>
 </head>
 
 <body>
     <style>
+        body {
+            font-family: 'Questrial', Arial;
+            font-size: 16px;
+            color: #c93937;
+        }
+        
+        .color {
+            color: #700f11;
+        }
+        
+        /* Carousel */
+        
         .amp-carousel-button {
             background-color: rgba(110, 15, 17, .5)!important;
         }
+        
+        .caption {
+            position: absolute;
+            right: 15%;
+            top: 25%;
+            width: 400px;
+        }
+        
+        /* title slide 1 */
+        
+        .caption-title {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            position: relative;
+            width: 100%;
+            font-family: 'Questrial', Arial;
+            text-align: center;
+        }
+        
+        .caption-title li {
+            display: inline;
+        }
+        
+        .caption-title li span {
+            display: inline-block;
+            font-weight: 900;
+            font-size: 2.5em;
+            line-height: 1;
+            position: relative;
+            color: rgba(150, 15, 17, 0.6);
+            transform-style: preserve-3d;
+            perspective: 550px;
+            z-index: 1;
+        }
+        
+        .caption-title li span:before,
+        .caption-title li span:after {
+            position: absolute;
+            content: attr(data-letter);
+            line-height: inherit;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+            transition: all 0.3s;
+        }
+        
+        .caption-title li span:before {
+            text-shadow: none;
+            color: rgba(150, 15, 17, 0.12);
+        }
+        
+        .ot-letter-left span:before,
+        .ot-letter-left span:after {
+            transform-origin: 0 50%;
+        }
+        
+        .ot-letter-left span:before {
+            transform: scale(1.08, 1) skew(0deg, 1deg);
+        }
+        
+        .ot-letter-left span:after {
+            text-shadow: -1px 0px 0px hsla(360, 100%, 100%, 0.1), 3px 0px 1px hsla(0, 0%, 0%, 0.4);
+            transform: rotateY(-15deg);
+        }
+        
+        .ot-letter-left:hover span:before {
+            transform: scale(0.85, 1) skew(0deg, 20deg);
+        }
+        
+        .ot-letter-left:hover span:after {
+            transform: rotateY(-40deg);
+        }
+        
+        .ot-letter-left {
+            background: #f9f2f2;
+        }
+        
+        .ot-letter-left span {
+            text-shadow: 1px 4px 6px #fcdddd, 0 0 0 rgba(150, 15, 17, 0.3), 1px 4px 6px #fcdddd;
+        }
+        
+        .ot-letter-left span:after {
+            color: #f9f2f2;
+        }
+        
+        .ot-letter-left:hover span:after {
+            color: #fff;
+        }
+        
+        /* title slide 2 */
+        
+        .caption-title-1 {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            position: relative;
+            width: 100%;
+            font-family: 'Questrial', Arial;
+            text-align: center;
+        }
+        
+        .caption-title-1 li {
+            display: inline;
+        }
+        
+        .caption-title-1 li span {
+            display: inline-block;
+            font-weight: 900;
+            font-size: 2.5em;
+            line-height: 1;
+            position: relative;
+            color: rgba(150, 15, 17, 0.6);
+            transform-style: preserve-3d;
+            perspective: 550px;
+            z-index: 1;
+        }
+        
+        .caption-title-1 li span:before,
+        .caption-title-1 li span:after {
+            position: absolute;
+            content: attr(data-letter);
+            line-height: inherit;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+            transition: all 0.3s;
+        }
+        
+        .caption-title-1 li span:before {
+            text-shadow: none;
+            color: rgba(150, 15, 17, 0.12);
+        }
+        
+        .ut-letter-left span:before,
+        .ut-letter-left span:after {
+            transform-origin: 0 50%;
+        }
+        
+        .ut-letter-left span:before {
+            transform: scale(1.08, 1) skew(0deg, 1deg);
+        }
+        
+        .ut-letter-left span:after {
+            text-shadow: -1px 0px 0px hsla(360, 100%, 100%, 0.1), 3px 0px 1px hsla(0, 0%, 0%, 0.4);
+            transform: rotateY(-15deg);
+        }
+        
+        .ut-letter-left:hover span:before {
+            transform: scale(0.85, 1) skew(0deg, 20deg);
+        }
+        
+        .ut-letter-left:hover span:after {
+            transform: rotateY(-40deg);
+        }
+        
+        .ut-letter-left {
+            background: #fcdddd;
+        }
+        
+        .ut-letter-left span {
+            text-shadow: 1px 4px 6px #f4bdbd, 0 0 0 rgba(150, 15, 17, 0.3), 1px 4px 6px #f4bdbd;
+        }
+        
+        .ut-letter-left span:after {
+            color: #fcdddd;
+        }
+        
+        .ut-letter-left:hover span:after {
+            color: #f9f2f2;
+        }
+        
+        .caption p {
+            font-size:1.2em;
+            line-height: 1.5em;
+        }
+        
     </style>
-    <amp-carousel width=960 height=450 layout=responsive type=slides controls autoplay delay="6000">
-
-        <amp-img src="img/slide1.png" layout=fill>
-        </amp-img>
-
-        <amp-img src="img/slide2.png" width=960 height=450 layout=responsive>
-        </amp-img>
-
+    <amp-carousel width=960 height=450 layout=responsive type=slides controls autoplay delay="8000">
+        <div class="inner-slide">
+            <amp-img src="img/slide1.png" layout=fill>
+            </amp-img>
+            <div class="caption" layout="responsive">
+                <ul class="caption-title">
+                    <li class="ot-letter-left"><span data-letter="D">D</span></li>
+                    <li class="ot-letter-left"><span data-letter="E">E</span></li>
+                    <li class="ot-letter-left"><span data-letter="M">M</span></li>
+                    <li class="ot-letter-left"><span data-letter="E">E</span></li>
+                    <li class="ot-letter-left"><span data-letter="T">T</span></li>
+                    <li class="ot-letter-left"><span data-letter="R">R</span></li>
+                    <li class="ot-letter-left"><span data-letter="A">A</span></li>
+                    <li class="ot-letter-left"><span data-letter="T">T</span></li>
+                    <li class="ot-letter-left"><span data-letter="E">E</span></li>
+                    <li class="ot-letter-left"><span data-letter="C">C</span></li>
+                    <li class="ot-letter-left"><span data-letter="H">H</span></li>
+                </ul>
+                <p style="text-align:center;">
+                    Today <b>Demetratech</b> creates design websites built on advanced <span class="color">Open Source</span> technologies
+                    <br /> to <span class="color">communicate</span> and <span class="color">visualize</span> content and data.
+                </p>
+            </div>
+        </div>
+        <div class="inner-slide">
+            <amp-img src="img/slide2.png" width=960 height=450 layout=responsive>
+            </amp-img>
+            <div class="caption" layout="responsive">
+                <ul class="caption-title-1">
+                    <li class="ut-letter-left"><span data-letter="P">P</span></li>
+                    <li class="ut-letter-left"><span data-letter="R">R</span></li>
+                    <li class="ut-letter-left"><span data-letter="O">O</span></li>
+                    <li class="ut-letter-left"><span data-letter="J">J</span></li>
+                    <li class="ut-letter-left"><span data-letter="E">E</span></li>
+                    <li class="ut-letter-left"><span data-letter="C">C</span></li>
+                    <li class="ut-letter-left"><span data-letter="T">T</span></li>
+                </ul>
+                <p style="text-align:center;">
+                    Our project is to create specific <b>e-commerce</b> platforms for <span class="color">vintage</span>  products, aimed at <span class="color">general public</span> and <span class="color">commercial operators</span>.
+                </p>
+            </div>
+        </div>
     </amp-carousel>
 
     <amp-carousel width=auto height=600 controls>
