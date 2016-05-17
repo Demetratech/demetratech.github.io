@@ -79,19 +79,56 @@
 
 <body>
     <style>
+        /* responsive utilities */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .row {
+            width: 100%;
+        }
+        
+        .row::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+        
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+        /*basics styles */
+        
         body {
             font-family: 'Questrial', Arial;
             font-size: 16px;
             color: #c93937;
+            background: #f9f2f2;
         }
         
         .color {
             color: #700f11;
         }
-        /* Carousel */
+        
+        footer {
+            background:#c93937;
+            padding: 1em;
+            text-align:center;
+            color:#f9f2f2;
+            font-size: 16px;
+        }
+        
+        footer a{
+            text-decoration:none;
+            color:#fff;
+        }
+        
+        /* Main Carousel */
         
         .amp-carousel-button {
-            background-color: rgba(110, 15, 17, .5)!important;
+            background-color: rgba(110, 15, 17, .5);
         }
         
         .caption {
@@ -273,6 +310,28 @@
         }
         /* Accordion */
         
+        amp-accordion section {
+            padding: 1em;
+            background: #f9f2f2;
+            box-shadow: 0 4px 8px 0 rgba(150, 15, 17, 0.2), 0 6px 20px 0 rgba(150, 15, 17, 0.19)!important;
+        }
+        
+        .-amp-accordion-header {
+            background: #fcdddd;
+            border: none;
+        }
+        
+        section h1 {
+            text-align: center;
+            padding: .5em;
+            -webkit-transition: background-color .3s, color .15s, box-shadow .3s, opacity 0.3s;
+            transition: background-color .3s, color .15s, box-shadow .3s, opacity 0.3s;
+        }
+        
+        section h1:hover {
+            box-shadow: 0 4px 8px 0 rgba(150, 15, 17, 0.2), 0 6px 20px 0 rgba(150, 15, 17, 0.19)!important;
+        }
+        
         section[expanded] h1.toggle:after {
             font-weight: bold;
             content: 'Hide';
@@ -289,6 +348,200 @@
         
         section:not([expanded]) h1.toggle1:after {
             content: 'Photography';
+        }
+        
+        #clients {
+            margin-top: .6em;
+        }
+        
+        #clients .amp-carousel-button {
+            background-color: rgba(110, 15, 17, 1);
+            -webkit-transition: background-color .3s, color .15s, box-shadow .3s, opacity 0.3s;
+            transition: background-color .3s, color .15s, box-shadow .3s, opacity 0.3s;
+            top: 90%;
+        }
+        
+        #clients a {
+            margin: 5px;
+            text-decoration: none;
+            color: #c93937;
+            font-size: 14px;
+            -webkit-transition: background-color .3s, color .15s, box-shadow .3s, opacity 0.3s;
+            transition: background-color .3s, color .15s, box-shadow .3s, opacity 0.3s;
+        }
+        
+        #clients a > p {
+            padding: 5px;
+            text-align: center;
+        }
+        
+        #clients .amp-carousel-button:hover,
+        #clients a:hover {
+            box-shadow: 0 4px 8px 0 rgba(150, 15, 17, 0.2), 0 6px 20px 0 rgba(150, 15, 17, 0.19);
+        }
+        /* Photo slide */
+        
+        .pcss3-accordion {
+            margin-top: 1em;
+            overflow: hidden;
+            border: 5px solid #f9f2f2;
+            box-shadow: 0 4px 8px 0 rgba(150, 15, 17, 0.2), 0 6px 20px 0 rgba(150, 15, 17, 0.19);
+        }
+        
+        .pcss3-accordion-item {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            width: 100%;
+            background: #f9f2f2;
+            box-shadow: 0 0 0 1px #f9f2f2;
+            transition: all 0.3s linear;
+            -o-transition: all 0.3s linear;
+            -ms-transition: all 0.3s linear;
+            -moz-transition: all 0.3s linear;
+            -webkit-transition: all 0.3s linear;
+        }
+        
+        .pcss3-accordion-item:first-child {
+            position: relative;
+            left: 0 !important;
+            width: 70%;
+        }
+        
+        .pcss3-accordion-pic {
+            position: relative;
+            display: block;
+            width: 100%;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            -o-transition: opacity 0.2s;
+            -ms-transition: opacity 0.2s;
+            -moz-transition: opacity 0.2s;
+            -webkit-transition: opacity 0.2s;
+        }
+        
+        .pcss3-accordion-input {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            cursor: pointer;
+            opacity: 0;
+        }
+        
+        .pcss3-accordion-input:checked {
+            width: 0;
+        }
+        
+        .pcss3-accordion-input:hover ~ .pcss3-accordion-pic {
+            opacity: 1;
+        }
+        
+        .pcss3-accordion-input:checked ~ .pcss3-accordion-pic {
+            opacity: 1;
+        }
+        
+        .pcss3-accordion-input:checked ~ .pcss3-accordion-item {
+            left: 100%;
+        }
+        
+        .pcss3-accordion4 .pcss3-accordion-item {
+            left: 15%;
+        }
+        /**/
+        /* caption styles */
+        /**/
+        
+        .pcss3-accordion-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            text-align: left;
+            opacity: 0;
+            transition: opacity 0.3s linear;
+            -o-transition: opacity 0.3s linear;
+            -ms-transition: opacity 0.3s linear;
+            -moz-transition: opacity 0.3s linear;
+            -webkit-transition: opacity 0.3s linear;
+            color: #fff;
+        }
+        
+        .pcss3-accordion-caption-right {
+            top: 0;
+            right: 0;
+            left: auto;
+            width: 40%;
+        }
+        
+        .pcss3-accordion-caption dl {
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .pcss3-accordion-caption dt {
+            margin: 0 0 12px;
+            padding: 0;
+            font: 400 24px/32px 'Questrial', Arial;
+        }
+        
+        .pcss3-accordion-caption dd {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            line-height: 16px;
+        }
+        
+        .pcss3-accordion-input:checked ~ .pcss3-accordion-caption {
+            opacity: 1;
+        }
+        /* media queries for photos */
+        
+        @media screen and (max-width: 768px) {
+            .pcss3-accordion-caption dl {
+                padding: 15px;
+            }
+            .pcss3-accordion-caption dt {
+                font-size: 18px;
+                line-height: 26px;
+            }
+            .pcss3-accordion-caption dd {
+                font-size: 11px;
+                line-height: 15px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .pcss3-accordion-caption dl {
+                padding: 10px;
+            }
+            .pcss3-accordion-caption dt {
+                font-size: 16px;
+                line-height: 20px;
+            }
+            .pcss3-accordion-caption dd {
+                font-size: 10px;
+                line-height: 14px;
+            }
+        }
+        /* media queries */
+        
+        @media screen and (min-width: 769px) {
+            .col-6 {
+                width: 50%;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .col-6 {
+                width: 100%;
+            }
         }
     </style>
     <amp-carousel width=960 height=450 layout=responsive type=slides controls autoplay delay="8000">
@@ -330,32 +583,126 @@
     </amp-carousel>
     <br />
     <br />
-    <amp-accordion>
-        <section>
-            <h1 class="toggle"></h1>
-            <amp-carousel width=auto height=158 controls>
+    <div class="row">
 
-                <amp-img src="img/clients/privacy.jpg" width=202 height=158>
-                </amp-img>
+        <!-- Clients -->
 
-                <amp-img src="img/clients/moodle.png" width=202 height=158>
-                </amp-img>
+        <amp-accordion class="col-6">
+            <section>
+                <h1 class="toggle"></h1>
+                <div class="row">
+                    <p style="text-align:center;">Samples from our web design work.
+                    <p align="center">
+                        <a target="_blank" href="http://www.twago.com/p/demetratech/98968">
+                            <amp-img border="0" src="http://www.twago.com/img/provider/btn-5st.png" alt="twago Provider" width=111 height=36></amp-img>
+                        </a>
+                    </p>
+                    <amp-carousel id="clients" width=auto height=250 controls autoplay delay="6000">
+                        <a href="https://www.behance.net/gallery/21800879/Encrypted-Contact-Form" alt="portfolio link">
+                            <amp-img src="img/clients/privacy.jpg" width=160 height=116>
+                            </amp-img>
+                            <p class="client-info">GPG encrypted form</p>
+                        </a>
+                        <a href="https://www.behance.net/gallery/21484037/E-learning-Portal-Design" alt="portfolio link">
+                            <amp-img src="img/clients/moodle.png" width=160 height=116>
+                            </amp-img>
+                            <p class="client-info">E-learning Portal</p>
+                        </a>
+                        <a href="https://www.behance.net/gallery/21496961/Wordpress-Creative-Portfolio" alt="portfolio link">
+                            <amp-img src="img/clients/golinelli.jpg" width=160 height=116>
+                            </amp-img>
+                            <p class="client-info">Artist Portfolio</p>
+                        </a>
+                        <a href="https://www.behance.net/gallery/23152787/Penny-Auctions-Wordpress-Site" alt="portfolio link">
+                            <amp-img src="img/clients/penny.png" width=160 height=116>
+                            </amp-img>
+                            <p class="client-info">Penny Auction Website</p>
+                        </a>
+                        <a href="https://www.behance.net/gallery/23153125/Responsive-Newsletter-Design" alt="portfolio link">
+                            <amp-img src="img/clients/mail.png" width=160 height=116>
+                            </amp-img>
+                            <p class="client-info">Mailchimp Newsletter</p>
+                        </a>
+                        <a href="https://www.behance.net/gallery/36716033/Material-Design-Home-page" alt="portfolio link">
+                            <amp-img src="img/clients/ravera-portfolio.png" width=160 height=116>
+                            </amp-img>
+                            <p class="client-info">Musician Home Page</p>
+                        </a>
+                    </amp-carousel>
+                </div>
+            </section>
+        </amp-accordion>
 
-                <amp-img src="img/clients/golinelli.jpg" width=202 height=158>
-                </amp-img>
+        <!-- end clients -->
 
-                <amp-img src="img/clients/penny.png" width=202 height=158>
-                </amp-img>
+        <!-- Photo -->
 
-                <amp-img src="img/clients/mail.png" width=202 height=158>
-                </amp-img>
-                
-                <amp-img src="img/clients/ravera-portfolio.png" width=202 height=158>
-                </amp-img>
-            </amp-carousel>
-        </section>
-    </amp-accordion>
-    
+        <amp-accordion class="col-6">
+            <section>
+                <h1 class="toggle1"></h1>
+                <div class="row">
+                    <p style="text-align:center;">Samples from our photography portfolios.</p>
+                    <div class="pcss3-accordion pcss3-accordion4">
+                        <div class="pcss3-accordion-item">
+                            <input type="radio" name="pcss3-accordion" checked class="pcss3-accordion-input">
+                            <img src="img/demo6.jpg" alt="" class="pcss3-accordion-pic">
+                            <div class="pcss3-accordion-caption pcss3-accordion-caption-right">
+                                <dl>
+                                    <dt>Duis sed turpis</dt>
+                                    <dd>Quisque odio risus, placerat ut varius eu, dapibus nec quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce volutpat, orci at convallis tincidunt, purus tortor sodales lectus,
+                                        auctor congue eros nunc et sem. Suspendisse pulvinar scelerisque eros sed eleifend.</dd>
+                                </dl>
+                            </div>
+
+                            <div class="pcss3-accordion-item">
+                                <input type="radio" name="pcss3-accordion" class="pcss3-accordion-input">
+                                <img src="img/demo1.jpg" alt="" class="pcss3-accordion-pic">
+                                <div class="pcss3-accordion-caption pcss3-accordion-caption-left">
+                                    <dl>
+                                        <dt>Curabitur nec ipsum orci</dt>
+                                        <dd>Aliquam auctor egestas risus, malesuada hendrerit turpis luctus at. Pellentesque sollicitudin, justo in ultricies gravida, nibh felis aliquam tortor, eget scelerisque mi odio ac felis. Duis quis mi sit amet felis
+                                            mattis faucibus a nec dolor. Cras eu enim turpis. Integer erat nibh, dictum et dignissim non, cursus sed ligula. Nullam lacinia pretium justo, vestibulum adipiscing eros scelerisque sit amet.</dd>
+                                    </dl>
+                                </div>
+
+                                <div class="pcss3-accordion-item">
+                                    <input type="radio" name="pcss3-accordion" class="pcss3-accordion-input">
+                                    <img src="img/demo2.jpg" alt="" class="pcss3-accordion-pic">
+                                    <div class="pcss3-accordion-caption pcss3-accordion-caption-right">
+                                        <dl>
+                                            <dt>Maecenas</dt>
+                                            <dd>Ut pretium tincidunt scelerisque. Nullam condimentum dapibus lacus, in bibendum ligula viverra sed.</dd>
+                                        </dl>
+                                    </div>
+
+                                    <div class="pcss3-accordion-item">
+                                        <input type="radio" name="pcss3-accordion" class="pcss3-accordion-input">
+                                        <img src="img/demo3.jpg" alt="" class="pcss3-accordion-pic">
+                                        <div class="pcss3-accordion-caption pcss3-accordion-caption-right">
+                                            <dl>
+                                                <dt>Maecenas</dt>
+                                                <dd>Ut pretium tincidunt scelerisque. Nullam condimentum dapibus lacus, in bibendum ligula viverra sed.</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <!--/ item4 -->
+
+                                </div>
+                                <!--/ item3 -->
+
+                            </div>
+                            <!--/ item2 -->
+
+                        </div>
+                        <!--/ item1 -->
+                    </div>
+                </div>
+            </section>
+        </amp-accordion>
+
+        <!-- end photo -->
+
+    </div>
     <footer>
         <ul>
             <li><a href="https://github.com/ampproject/amp-by-example/issues/new">Home Page</a></li>

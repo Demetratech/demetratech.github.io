@@ -80,35 +80,10 @@
   </noscript>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <style>
+    /* responsive utilities */
+    
     * {
       box-sizing: border-box;
-    }
-    
-    
-    html,
-    body {
-      overflow: hidden;
-    }
-    
-    body {
-      font-family: 'Questrial', Arial;
-      font-size: 16px;
-      color:#c93937;
-    }
-    
-    .color {
-      color:#700f11;
-    }
-    body,
-    viewer {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      overflow: hidden;
-      margin: 0;
-      padding: 0;
     }
     
     .row {
@@ -125,7 +100,34 @@
       float: left;
       padding: 15px;
     }
+    /* basci styles */
     
+    html,
+    body {
+      overflow: hidden;
+    }
+    
+    body {
+      font-family: 'Questrial', Arial;
+      font-size: 16px;
+      color: #c93937;
+    }
+    
+    .color {
+      color: #700f11;
+    }
+    
+    body,
+    viewer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
     
     viewer {
       background: #fff;
@@ -149,23 +151,20 @@
       justify-content: flex-start;
       align-items: center;
       padding: 0 8px;
-      box-shadow: rgba(150,15,17,0.15) 1px 1px 14px;
+      box-shadow: rgba(150, 15, 17, 0.15) 1px 1px 14px;
     }
-  
+    
     .menu-right a:hover {
       color: #700f11;
     }
-    
     /*media queries */
     
     @media screen and (min-width: 769px) {
-      
       header {
         height: 60px;
       }
-      
       .menu-right {
-       padding-top:2.3em; 
+        padding-top: 2.3em;
       }
       .col-1 {
         width: 8.33%;
@@ -206,17 +205,41 @@
     }
     
     @media screen and (max-width: 768px) {
-      
       [class*="col-"] {
         width: 100%;
       }
-      
-      header{
-        height:9.4em;
+      header {
+        height: 9.4em;
       }
-      
       header .row {
-        text-align:center;
+        text-align: center;
+      }
+      .col-4 {
+        width: 100%;
+      }
+      .col-5 {
+        width: 100%;
+      }
+      .col-6 {
+        width: 100%;
+      }
+      .col-7 {
+        width: 100%;
+      }
+      .col-8 {
+        width: 100%;
+      }
+      .col-9 {
+        width: 100%;
+      }
+      .col-10 {
+        width: 100%;
+      }
+      .col-11 {
+        width: 100%;
+      }
+      .col-12 {
+        width: 100%;
       }
     }
     
