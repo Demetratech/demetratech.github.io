@@ -99,6 +99,7 @@
             float: left;
             padding: 15px;
         }
+        
         /*basics styles */
         
         body {
@@ -106,6 +107,7 @@
             font-size: 16px;
             color: #c93937;
             background: #f9f2f2;
+            text-align: center;
         }
         
         .color {
@@ -115,6 +117,7 @@
         footer {
             background: url('footer-sito.svg');
             background-size: 100%;
+            background-repeat: no-repeat;
             padding: 1em;
             text-align: center;
             color: #f9f2f2;
@@ -130,6 +133,11 @@
         footer .row {
             margin-top: 7em;
         }
+        
+        .footer-tablet {
+            visibility: hidden;
+        }
+        
         /* Scrollbar */
         
         body::-webkit-scrollbar-track {
@@ -145,7 +153,6 @@
         body::-webkit-scrollbar-thumb {
             background-color: #700f11;
         }
-        
         /* Main Carousel */
         
         .amp-carousel-button {
@@ -329,6 +336,7 @@
             font-size: 1.2em;
             line-height: 1.5em;
         }
+        
         /* Accordion */
         
         amp-accordion section {
@@ -400,6 +408,7 @@
         #clients a:hover {
             box-shadow: 0 4px 8px 0 rgba(150, 15, 17, 0.2), 0 6px 20px 0 rgba(150, 15, 17, 0.19);
         }
+        
         /* Photo slide */
         
         .pcss3-accordion {
@@ -560,6 +569,28 @@
             .col-4 {
                 width: 33.33%;
             }
+            .carousel-img-mobile {
+                display:none;
+            }
+            .about-mobile {
+                display: none;
+            }
+
+        }
+        
+        @media screen and (max-width:1025px) {
+            footer {
+                background-image: none;
+                background-color: #c93937;
+            }
+            footer .row {
+                margin-top: 2em;
+            }
+            .footer-tablet {
+                margin-top:1.5em;
+                opacity:.6;
+                visibility:visible;
+            }
         }
         
         @media screen and (max-width: 768px) {
@@ -569,12 +600,38 @@
             .col-4 {
                 width: 100%;
             }
+            .carousel-img {
+                display:none;
+            }
+            .caption {
+                display: none;
+            }
+            .about-mobile {
+                display: block;
+            }
+            .about-mobile > p {
+                font-size: 22px;
+                line-height: 1.5em;
+                padding: .5em;
+            }
+            footer > .row >.col-6 > .col-6:first-child {
+                border-right: 1px solid #fff;
+            }
+            .footer-tablet {
+                visibility:visible;
+            }
         }
     </style>
     <amp-carousel width=960 height=450 layout=responsive type=slides controls autoplay delay="8000">
         <div class="inner-slide">
-            <amp-img src="img/slide1.png" layout=fill>
-            </amp-img>
+            <div class="carousel-img">
+                <amp-img src="img/slide1.png" layout=fill>
+                </amp-img>
+            </div>
+            <div class="carousel-img-mobile">
+                <amp-img src="img/slide1-device.png" layout=fill>
+                </amp-img>
+            </div>
             <div class="caption" layout="responsive">
                 <ul class="caption-title">
                     <li class="ot-letter-left"><span data-letter="A">A</span></li>
@@ -590,8 +647,14 @@
             </div>
         </div>
         <div class="inner-slide">
-            <amp-img src="img/slide2.png" width=960 height=450 layout=responsive>
-            </amp-img>
+            <div class="carousel-img">
+                <amp-img src="img/slide2.png" layout=fill>
+                </amp-img>
+            </div>
+            <div class="carousel-img-mobile">
+                <amp-img src="img/slide2-device.png" layout=fill>
+                </amp-img>
+            </div>
             <div class="caption" layout="responsive">
                 <ul class="caption-title-1">
                     <li class="ut-letter-left"><span data-letter="P">P</span></li>
@@ -609,7 +672,12 @@
         </div>
     </amp-carousel>
     <br />
-    <br />
+    <div class="about-mobile">
+        <h1>About</h1>
+        <p>Today <b>Demetratech</b> creates design websites built on advanced <span class="color">Open Source</span> technologies
+            <br /> to <span class="color">communicate</span> and <span class="color">visualize</span> content and data.</p>
+        <br />
+    </div>
     <div class="row">
 
         <!-- Clients -->
@@ -687,8 +755,7 @@
                                 <div class="pcss3-accordion-caption pcss3-accordion-caption-left">
                                     <dl>
                                         <dt>Curabitur nec ipsum orci</dt>
-                                        <dd>Aliquam auctor egestas risus, malesuada hendrerit turpis luctus at. Pellentesque sollicitudin, justo in ultricies gravida, nibh felis aliquam tortor, eget scelerisque mi odio ac felis. Duis quis mi sit amet felis
-                                            mattis faucibus a nec dolor. Cras eu enim turpis. Integer erat nibh, dictum et dignissim non, cursus sed ligula. Nullam lacinia pretium justo, vestibulum adipiscing eros scelerisque sit amet.</dd>
+                                        <dd>Aliquam auctor egestas risus, malesuada hendrerit turpis luctus at.</dd>
                                     </dl>
                                 </div>
 
@@ -749,8 +816,8 @@
                     <br /> PEC <a href="mailto:demetratech@pec.confesercenti.it">demetratech@pec.confesercenti.it</a>
                 </p>
             </div>
-            <div class="col-6">
-
+            <div class="col-6 footer-tablet" layout="responsive">
+                <amp-img src="img/footer-tablet.svg" alt="extended logo" width=575 height=147 layout="responsive"></amp-img>
             </div>
         </div>
     </footer>
