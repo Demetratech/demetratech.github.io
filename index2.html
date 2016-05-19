@@ -210,37 +210,18 @@
       }
       header {
         height: 9.4em;
-        background-color:rgba(250, 220, 220, 1);
+        background-color: rgba(250, 220, 220, 1);
       }
       header .row {
         text-align: center;
       }
-      .col-4 {
-        width: 100%;
+      viewer[data-show-container="2"] #container2 {
+        visibility: visible;
+        margin-top: 9.4em;
       }
-      .col-5 {
-        width: 100%;
-      }
-      .col-6 {
-        width: 100%;
-      }
-      .col-7 {
-        width: 100%;
-      }
-      .col-8 {
-        width: 100%;
-      }
-      .col-9 {
-        width: 100%;
-      }
-      .col-10 {
-        width: 100%;
-      }
-      .col-11 {
-        width: 100%;
-      }
-      .col-12 {
-        width: 100%;
+      viewer[data-show-container="3"] #container3 {
+        visibility: visible;
+        margin-top: 9.4em;
       }
     }
     
@@ -291,6 +272,7 @@
     
     viewer[data-show-container="2"] #container2 {
       visibility: visible;
+      margin-top: 60px;
     }
     
     viewer[data-show-container="2"] #show-container2-anchor {
@@ -299,6 +281,7 @@
     
     viewer[data-show-container="3"] #container3 {
       visibility: visible;
+      margin-top: 60px;
     }
     
     viewer[data-show-container="3"] #show-container3-anchor {
@@ -453,9 +436,10 @@
       this.iframe.style.display = '';
       this.iframe.style.visibility = '';
       this.iframe.contentWindow.onbeforeunload = (function() {
-        this.container.style.paddingTop = '120px';
+        this.container.style.paddingTop = '200px';
+        this.container.style.paddingLeft = '50px';
         this.container.textContent =
-          'Unload of the AMP iframe is not allowed!';
+          'LOADING';
       }).bind(this);
     };
     Viewer.prototype.documentReady_ = function() {
@@ -669,17 +653,17 @@
     </header>
     <container id="container1">
       <div class="wait">
-        Please wait, the AMP doc will appear here...
+        Loading...
       </div>
     </container>
     <container id="container2">
       <div class="wait">
-        Please wait, the AMP doc will appear here...
+        Loading...
       </div>
     </container>
     <container id="container3">
       <div class="wait">
-        Please wait, the AMP doc will appear here...
+        Loading...
       </div>
     </container>
   </viewer>
