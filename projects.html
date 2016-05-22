@@ -11,7 +11,7 @@
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-    <title>Demetratech Projects</title>
+    <title>Demetratech webdesign Projects</title>
     <style amp-boilerplate>
         body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -80,28 +80,76 @@
 
 <body>
     <style>
-        body,
-        html {
+        /*basics styles */
+        
+        html,
+        body {
             height: 100%;
+        }
+        
+        .idle {
+            visibility: hidden;
+        }
+        
+        body {
+            font-family: 'Questrial', Arial;
+            font-size: 18px;
+            color: #c93937;
+            background: #f9f2f2;
+        }
+        
+        .color {
+            color: #700f11;
+            font-weight: bold;
         }
         
         a {
-            color: inherit;
             text-decoration: none;
-            border-bottom: 3px dotted #fff;
+            color: #c93937;
+        }
+        
+        a:hover {
+            text-decoration: none;
+            color: #700f11;
+        }
+        
+        a:visited {
+            text-decoration: none;
+            color: #c93937;
+        }
+        
+        h1 {
+            color: #700f11;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 1em;
         }
         
         div {
-            height: 100%;
             display: flex;
             align-items: center;
-            font-weight: bold;
-            font-size: 3em;
             justify-content: center;
-            wdidth: 100%;
-            background-size: 100%;
             background-attachment: fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
             background-size: cover;
+            padding: 1em;
+        }
+        /* scrollbar */
+        
+        body::-webkit-scrollbar-track {
+            border: none;
+            background-color: #f9f2f2;
+        }
+        
+        body::-webkit-scrollbar {
+            width: 10px;
+            background-color: #fcdddd;
+        }
+        
+        body::-webkit-scrollbar-thumb {
+            background-color: #700f11;
         }
         
         .one,
@@ -112,29 +160,62 @@
         }
         
         .one {
-            background-image: url(http://randomsplash.jshawl.com/?1);
+            background-image: url(img/vintage.jpg);
+            background-position: center;
+            min-height: 300px;
+            align-items: flex-start;
+            justify-content: flex-start;
         }
         
+        
         .two {
-            background-image: url(http://randomsplash.jshawl.com/?2);
+            background-image: url(img/Change.jpg);
+            background-position: top;
+            min-height: 300px;
+        }
+        
+        .three {
+            background-image: url(img/logo-projects.jpg);
+            background-position: center;
+            min-height: 300px;
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+        /* media queries */
+        
+        @media screen and (max-width: 768px) {
+            html {
+                margin-top: -150px;
+            }
         }
     </style>
     <div class='one'>
-        <p>Jeeltcraft</p>
+        <br />
+        <p style="font-size:24px;font-weight:bold;color:#fcdddd;background-color:rgba(150, 15, 17, 0.45);padding:2em 3em;">Get Vintage.</p>
     </div>
 
     <div>
-        <p>is a rockstar developer</p>
+        <h1>Projects</h1>
+        <br />
+        <p>Our main project is to create specific <span class="color">e-commerce</span> platforms for <span class="color">vintage products</span>, aimed at general public and <span class="color">commercial operators</span>. We focus on the <span class="color">cultural value</span>            and <span class="color">social impact</span> of products and businesses.</p>
     </div>
 
     <div class='two'>
-        <p>who makes <a href='http://jeeltcraft.com'>cool stuff</a></p>
+        <br />
+        <br />
+        <br />
+        <p style="font-size:24px;font-weight:bold;color:#fcdddd;background-color:rgba(150, 15, 17, 0.45);padding:2em 3em;">Lets make it happen.</p>
     </div>
 
     <div>
-        <p>Wow! Scroll effects are rad.</p>
+        <h1>Open Data</h1>
+        <br />
+        <p>We work for a world in which <span class="color">data sharing</span> help people to <span class="color">participate</span> and develop new wealths for our society. We build <span class="color">Interactive visualization</span> aiming to communicate
+            our stories and work with the most immediate <span class="color">impact</span> on your public.</p>
     </div>
-
+    <div class='three'>
+        <p style="font-size:24px;font-weight:bold;color:#fcdddd;background-color:rgba(150, 15, 17, 0.45);padding:2em 3em;">Fits your web needs.</p>
+    </div>
 </body>
 
 </html>
