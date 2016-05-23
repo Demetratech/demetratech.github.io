@@ -155,7 +155,6 @@
         .one,
         .two,
         .three {
-            color: #fff;
             text-shadow: 1px 1px 0px #000;
         }
         
@@ -167,7 +166,6 @@
             justify-content: flex-start;
         }
         
-        
         .two {
             background-image: url(img/Change.jpg);
             background-position: top;
@@ -176,11 +174,42 @@
         
         .three {
             background-image: url(img/logo-projects.jpg);
-            background-position: center;
-            min-height: 300px;
+            background-position: top left;
+            min-height: 400px;
             align-items: flex-end;
             justify-content: flex-end;
         }
+        
+        /* animations */
+        
+        .dt-animate {
+            -webkit-animation: zoom-out 2s infinite both;
+            -moz-animation: zoom-out 2s infinite both;
+            animation: zoom-out 2s infinite both;
+            -moz-animation-delay: 600ms;
+            animation-delay: 600ms;
+        }
+        
+        @-webkit-keyframes zoom-out {
+            from, to {
+                -webkit-transform: scale3d(0, 0, 0);
+            }
+            45%,
+            55% {
+                -webkit-transform: scale3d(1, 1, 1);
+            }
+        }
+        
+        @keyframes zoom-out {
+            from, to {
+                transform: scale3d(0, 0, 0);
+            }
+            45%,
+            55% {
+                transform: scale3d(1, 1, 1);
+            }
+        }
+        
         /* media queries */
         
         @media screen and (max-width: 768px) {
@@ -191,7 +220,7 @@
     </style>
     <div class='one'>
         <br />
-        <p style="font-size:24px;font-weight:bold;color:#fcdddd;background-color:rgba(150, 15, 17, 0.45);padding:2em 3em;">Get Vintage.</p>
+        <p class="dt-animate" style="font-size:24px;font-weight:bold;color:#fcdddd;background-color:rgba(150, 15, 17, 0.45);padding:2em 3em;">Get Vintage.</p>
     </div>
 
     <div>
@@ -204,7 +233,7 @@
         <br />
         <br />
         <br />
-        <p style="font-size:24px;font-weight:bold;color:#fcdddd;background-color:rgba(150, 15, 17, 0.45);padding:2em 3em;">Lets make it happen.</p>
+        <p class="dt-animate" style="font-size:24px;font-weight:bold;color:#fcdddd;background-color:rgba(150, 15, 17, 0.45);padding:2em 3em;">Lets make it happen.</p>
     </div>
 
     <div>
@@ -214,7 +243,7 @@
             our stories and work with the most immediate <span class="color">impact</span> on your public.</p>
     </div>
     <div class='three'>
-        <p style="font-size:24px;font-weight:bold;color:#fcdddd;background-color:rgba(150, 15, 17, 0.45);padding:2em 3em;">Fits your web needs.</p>
+        <p class="dt-animate" style="font-size:24px;font-weight:bold;color:#fcdddd;background-color:rgba(150, 15, 17, 0.45);padding:2em 3em;">Fits your web needs.</p>
     </div>
 </body>
 
