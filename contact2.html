@@ -140,7 +140,7 @@
       position: absolute;
       text-align: center;
       width: 100%;
-      z-index: 9999;
+      z-index: 100;
     }
     
     p {
@@ -333,6 +333,18 @@
       right: 5%;
       top: 48%;
     }
+    /* modal dialogs */
+    
+    .lightbox {
+      background: rgba(150, 15, 17, 0.6);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+    
+    .lightbox h1 {
+      color: #f9f2f2;
+    }
     /* media queries */
     
     @media screen and (min-width: 769px) {
@@ -382,7 +394,7 @@
       <div class="card transition">
         <h2 class="transition">Libero Camellini</h2>
         <p>CEO and vintage broker, if you're interested in selling vintage products he's the right person.</p>
-        <div class="cta-container transition"><a href="#" class="cta">Contact him</a></div>
+        <div class="cta-container transition"><a on="tap:libero-contacts" role="button" tabindex="0" class="cta">Contact him</a></div>
         <div class="card_circle transition"></div>
       </div>
     </div>
@@ -392,7 +404,7 @@
         <p>Web Designer as <a href="http://jeeltcraft.com">Jeeltcraft</a>. For hiring and reputation please see <a href="ttp://www.twago.com/p/demetratech/98968">twago</a>
           <br />GPG encrypted mail are appreciated.
         </p>
-        <div class="cta-container transition"><a href="#" class="cta">Call to action</a></div>
+        <div class="cta-container transition"><a on="tap:laura-contacts" role="button" tabindex="1" class="cta">Contact her</a></div>
         <div class="card_circle_1 transition"></div>
       </div>
     </div>
@@ -420,6 +432,24 @@
       </div>
     </div>
   </footer>
+  <amp-lightbox id="libero-contacts"
+      layout="nodisplay">
+    <div class="lightbox"
+        on="tap:libero-contacts.close"
+        role="button"
+        tabindex="0">
+      <h1>Hello World!</h1>
+    </div>
+  </amp-lightbox>
+  <amp-lightbox id="laura-contacts"
+      layout="nodisplay">
+    <div class="lightbox"
+        on="tap:laura-contacts.close"
+        role="button"
+        tabindex="1">
+      <h1>Hello World! It's really me!</h1>
+    </div>
+  </amp-lightbox>
 </body>
 
 </html>
