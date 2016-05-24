@@ -100,7 +100,92 @@
       float: left;
       padding: 15px;
     }
-    /* basci styles */
+    
+    /* loader */
+    
+    .wait {
+      position: absolute;
+      z-index: 3;
+      top: 50%;
+      left: 45%;
+      width: 100px;
+      height: 100px;
+      margin: 0 10px 10px 0;
+      padding: 20px 20px 20px;
+      text-align: center;
+    }
+    
+    .bar {
+      float: left;
+      width: 15px;
+      height: 6px;
+      border-radius: 2px;
+      background-color: #79b49c;
+    }
+    
+    .wait .bar {
+      animation: loadingJ 2s cubic-bezier(.17, .37, .43, .67) infinite;
+    }
+    
+    @-webkit-keyframes loadingJ {
+      0%, 100% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(80px, 0);
+        background-color: #f5634a;
+        width: 25px;
+      }
+    }
+    
+    
+    @-moz-keyframes loadingJ {
+      0%, 100% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(80px, 0);
+        background-color: #f5634a;
+        width: 25px;
+      }
+    }
+    
+    
+    @-ms-keyframes loadingJ {
+      0%, 100% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(80px, 0);
+        background-color: #f5634a;
+        width: 25px;
+      }
+    }
+    
+    @-o-keyframes loadingJ {
+      0%, 100% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(80px, 0);
+        background-color: #f5634a;
+        width: 25px;
+      }
+    }
+    
+    @keyframes loadingJ {
+      0%, 100% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(80px, 0);
+        background-color: #f5634a;
+        width: 25px;
+      }
+    }
+    
+    
+    /* basic styles */
     
     html,
     body {
@@ -242,14 +327,6 @@
       flex-grow: 0;
       flex-shrink: 0;
       padding: 8px;
-    }
-    
-    .wait {
-      position: absolute;
-      z-index: 3;
-      top: 100px;
-      left: 20px;
-      font-size: 12px;
     }
     
     container {
@@ -652,17 +729,17 @@
     </header>
     <container id="container1">
       <div class="wait">
-        Loading...
+        <div class="bar"></div>
       </div>
     </container>
     <container id="container2">
       <div class="wait">
-        Loading...
+        <div class="bar"></div>
       </div>
     </container>
     <container id="container3">
       <div class="wait">
-        Loading...
+        <div class="bar"></div>
       </div>
     </container>
   </viewer>

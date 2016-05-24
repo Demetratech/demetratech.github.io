@@ -1,0 +1,55 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../google-apis/google-jsapi.html">
+
+<polymer-element name="sheets-geo-chart" attributes="url">
+    <template>
+        <style>
+            :host {
+                display: block;
+            }
+            
+            #chart {
+                display: block;
+                height: 300px;
+                width: 100%;
+            }
+        </style>
+
+
+        <google-jsapi on-api-load="{{readyForAction}}"></google-jsapi>
+        <div id="chart"></div>
+    </template>
+    <script>
+        Polymer({
+            created: function() {
+                this.colors = ['#700f11', '#c93937', '#fcdddd', '#c3ede8', '#79b49c']
+            },
+            readyForAction: function() {
+                google.load("visualization", "1", {
+                    packages: ['corechart'],
+                    callback: function() {
+                        this.drawChart()
+                    }.bind(this)
+                });
+            },
+            drawChart: function() {
+                var query = new google.visualization.Query(
+                    this.url);
+                query.send(function(response) {
+                    this.renderChart(response);
+                }.bind(this))
+            },
+            renderChart: function(response) {
+                var options = {
+                    title: ' ',
+                    colors: this.colors,
+                    backgroundColor: '#f9f2f2',
+                };
+
+                var data = response.getDataTable();
+                var chart = new google.visualization.GeoChart(this.$.chart);
+                chart.draw(data, options);
+            }
+        });
+    </script>
+</polymer-element>

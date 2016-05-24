@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html amp lang="en" itemscope itemtype="http://schema.org/WebSite">
 
-<!-- "change" picture by https://www.flickr.com/photos/arthurjohnpicton -->
+<!-- "change" picture by https://www.flickr.com/photos/arthurjohnpicton > -->
 
 <head>
     <meta charset="utf-8">
     <link rel="canonical" href="amps.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+    <link rel="import" href="chart-webcomponents/bower_components/polymer/polymer.html">
+    <link rel="import" href="chart-webcomponents/bower_components/paper-elements/paper-elements.html">
+    <link rel="import" href="chart-webcomponents/bower_components/core-elements/core-elements.html">
+    <link rel="import" href="chart-webcomponents/bower_components/sheets-geo-chart/sheets-geo-chart.html">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
     <title>Demetratech webdesign Projects</title>
     <style amp-boilerplate>
@@ -105,7 +109,7 @@
         
         a {
             text-decoration: none;
-            color: #c93937;
+            color: #700f11;
         }
         
         a:hover {
@@ -115,7 +119,7 @@
         
         a:visited {
             text-decoration: none;
-            color: #c93937;
+            color: #700f11;
         }
         
         h1 {
@@ -173,24 +177,69 @@
         }
         
         .three {
-            background-image: url(img/logo-projects.jpg);
-            background-position: top left;
-            min-height: 400px;
+            background-image: url(img/projects-bak.png);
+            background-position: left center;
+            min-height: 300px;
             align-items: flex-end;
             justify-content: flex-end;
         }
-        
         /* animations */
         
+        .dt-opacity {
+            -webkit-animation: opacity 4s infinite both;
+            -moz-animation: opacity 4s infinite both;
+            -ms-animation: opacity 4s infinite both;
+            -o-animation: opacity 4s infinite both;
+            animation: opacity 4s infinite both;
+            -webkit-transition-timing-function: cubic-bezier(0.42, 0, 0.88, 1);
+            -moz-transition-timing-function: cubic-bezier(0.42, 0, 0.88, 1);
+            -o-transition-timing-function: cubic-bezier(0.42, 0, 0.88, 1);
+            transition-timing-function: cubic-bezier(0.42, 0, 0.88, 1);
+        }
+        
         .dt-animate {
-            -webkit-animation: zoom-out 2s infinite both;
-            -moz-animation: zoom-out 2s infinite both;
-            animation: zoom-out 2s infinite both;
-            -moz-animation-delay: 600ms;
-            animation-delay: 600ms;
+            -webkit-animation: zoom-out 4s infinite both;
+            -moz-animation: zoom-out 4s infinite both;
+            -ms-animation: zoom-out 4s infinite both;
+            -o-animation: zoom-out 4s infinite both;
+            animation: zoom-out 4s infinite both;
+            -webkit-transition-timing-function: cubic-bezier(0.42, 0, 0.88, 1);
+            -moz-transition-timing-function: cubic-bezier(0.42, 0, 0.88, 1);
+            -o-transition-timing-function: cubic-bezier(0.42, 0, 0.88, 1);
+            transition-timing-function: cubic-bezier(0.42, 0, 0.88, 1);
         }
         
         @-webkit-keyframes zoom-out {
+            from, to {
+                -webkit-transform: scale3d(0, 0, 0);
+            }
+            45%,
+            55% {
+                -webkit-transform: scale3d(1, 1, 1);
+            }
+        }
+        
+        @-moz-keyframes zoom-out {
+            from, to {
+                -webkit-transform: scale3d(0, 0, 0);
+            }
+            45%,
+            55% {
+                -webkit-transform: scale3d(1, 1, 1);
+            }
+        }
+        
+        @-ms-keyframes zoom-out {
+            from, to {
+                -webkit-transform: scale3d(0, 0, 0);
+            }
+            45%,
+            55% {
+                -webkit-transform: scale3d(1, 1, 1);
+            }
+        }
+        
+        @-o-keyframes zoom-out {
             from, to {
                 -webkit-transform: scale3d(0, 0, 0);
             }
@@ -210,6 +259,78 @@
             }
         }
         
+        @-webkit-keyframes opacity {
+            from, to {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+        
+        @-moz-keyframes opacity {
+            from, to {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+        
+        @-ms-keyframes opacity {
+            from, to {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+        
+        @-o-keyframes opacity {
+            from, to {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+        
+        @keyframes opacity {
+            from, to {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+        
+        /* dataviz */
+        
+        .paper-div{
+            
+            padding: 1em;
+            background: #f9f2f2;
+            box-shadow: 0 4px 8px 0 rgba(150, 15, 17, 0.2), 0 6px 20px 0 rgba(150, 15, 17, 0.19)!important;
+        }
+        
+        paper-dropdown-menu {
+            z-index: 2;
+            background: trasparent;
+            padding-left: 10px;
+            margin-top: -2em;
+        }
+        
+        .container-map-small {
+            position: relative;
+            left: -33%;
+        }
+        
+        .geo-github {
+            position:relative;
+            float:right;
+            top:15em;
+        }
+        
         /* media queries */
         
         @media screen and (max-width: 768px) {
@@ -220,7 +341,9 @@
     </style>
     <div class='one'>
         <br />
-        <p class="dt-animate" style="font-size:24px;font-weight:bold;color:#fcdddd;background-color:rgba(150, 15, 17, 0.45);padding:2em 3em;">Get Vintage.</p>
+        <div class="dt-opacity">
+            <p class="dt-animate" style="font-size:24px;font-weight:bold;color:#fcdddd;background-color:rgba(150, 15, 17, 0.45);padding:2em 3em;">Get Vintage.</p>
+        </div>
     </div>
 
     <div>
@@ -233,17 +356,59 @@
         <br />
         <br />
         <br />
-        <p class="dt-animate" style="font-size:24px;font-weight:bold;color:#fcdddd;background-color:rgba(150, 15, 17, 0.45);padding:2em 3em;">Lets make it happen.</p>
+        <div class="dt-opacity">
+            <p class="dt-animate" style="font-size:24px;font-weight:bold;color:#fcdddd;background-color:rgba(150, 15, 17, 0.45);padding:2em 3em;">Lets make it happen.</p>
+        </div>
     </div>
 
     <div>
-        <h1>Open Data</h1>
+        <h1>Interactive <span itemprop="keyword">data visualizations</span></h1>
         <br />
-        <p>We work for a world in which <span class="color">data sharing</span> help people to <span class="color">participate</span> and develop new wealths for our society. We build <span class="color">Interactive visualization</span> aiming to communicate
-            our stories and work with the most immediate <span class="color">impact</span> on your public.</p>
+        <div class="paper-div">
+            <p style="width:500px;height:400px;text-align:center" layout="responsive">Urban waste sample visualization. Data source is <a alt="open data source" href="http://dati.arpa.emr.it/">Here</a>. Visualization html5 sources are <a alt="html5 source and repository" href="http://www.jeeltcraft.com/sappiamo/chart-webcomponents/single-demo.html">Here</a>. 
+                <template is="auto-binding" id="post-theme">
+                    <br />
+                    <br />
+                    <div class="viz">
+                        <div class="container-map-small">
+                            <core-pages id="pages" selected="{{page}}" valueattr="data-category">
+                                <section data-category="RU">
+                                    <sheets-geo-chart class="small" url="https://docs.google.com/spreadsheets/d/1Epqh5rOtPO69u_GEjG00rKFKSF4pfgnXQu2jIXjIw3A/edit#gid=0">
+                                    </sheets-geo-chart>
+                                </section>
+                                <section data-category="RD">
+                                    <sheets-geo-chart class="small" url="https://docs.google.com/spreadsheets/d/1RoZNgw6rfOFzTZIPY_w6v0shSuV1sCzIbzJNoVJvnY4/edit#gid=0">
+                                    </sheets-geo-chart>
+                                </section>
+                                <section data-category="RD-PC">
+                                    <sheets-geo-chart class="small" url="https://docs.google.com/spreadsheets/d/1jvwccc5SCeJzI-zcfayhbsp59ZtlosJLmTbZhkkIODE/edit#gid=0">
+                                    </sheets-geo-chart>
+                                </section>
+                            </core-pages>
+                        </div>
+                        <paper-dropdown-menu closedIcon="expand-more">
+                            <paper-dropdown class="dropdown">
+                                <core-menu class="menu" selected="{{page}}" valueattr="data-category">
+                                    <paper-item data-category="RU">Urban Waste (kg)</paper-item>
+                                    <paper-item data-category="RD">Recycled Waste (kg)</paper-item>
+                                    <paper-item data-category="RD-PC">Recycling percentage</paper-item>
+                                </core-menu>
+                            </paper-dropdown>
+                        </paper-dropdown-menu>
+                        <script>
+                            var app7 = document.querySelector('#post-theme');
+                            app7.page = 'RU';
+                        </script>
+                    </div>
+                </template>
+                <a class="geo-github" href="http://www.jeeltcraft.com/sappiamo/chart-webcomponents/single-demo.html" alt="github html5 dataviz freebie">Fork on github</a>
+            </p>
+        </div>
     </div>
     <div class='three'>
-        <p class="dt-animate" style="font-size:24px;font-weight:bold;color:#fcdddd;background-color:rgba(150, 15, 17, 0.45);padding:2em 3em;">Fits your web needs.</p>
+        <div class="dt-opacity">
+            <p class="dt-animate" style="font-size:24px;font-weight:bold;color:#fcdddd;background-color:rgba(150, 15, 17, 0.45);padding:2em 3em;">Fits your web needs.</p>
+        </div>
     </div>
 </body>
 
