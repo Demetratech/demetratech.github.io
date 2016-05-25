@@ -131,6 +131,14 @@
       color: #700f11;
     }
     
+    h1 {
+      color: #c93937;
+      font-family: 'Questrial', Arial;
+      font-size:28px;
+      text-align:center;
+      margin-bottom:1em;  
+    }
+    
     h2 {
       color: #c93937;
       font-family: 'Questrial', Arial;
@@ -151,7 +159,7 @@
       margin-top: 200px;
       position: absolute;
       text-align: center;
-      z-index: 9999;
+      z-index: 100;
       padding: 1em;
     }
     
@@ -167,12 +175,15 @@
     }
     
     .footer-contact {
+      position:relative;
+      display:inline-block;
       color: #f9f2f2;
+      margin-top: 2em;
     }
     
     .footer-contact a {
       text-decoration: none;
-      color: #fff;
+      color: #fff!important;
     }
     
     footer .row {
@@ -242,8 +253,8 @@
     }
     
     .card:hover h2 {
-      background: rgba(199, 56, 56, .3);
-      color: #f9f2f2;
+      background: rgba(199, 56, 56, .5);
+      color: #c3ede8;
       margin-top: 100px;
       padding: 5px;
     }
@@ -286,11 +297,10 @@
       position: absolute;
       text-align: center;
       width: 100%;
-      z-index: 9999;
+      z-index: 100;
     }
     
     .cta {
-      -moz-border-radius: 2px;
       -moz-transition: 0.2s ease-out;
       -ms-transition: 0.2s ease-out;
       -o-transition: 0.2s ease-out;
@@ -298,7 +308,6 @@
       -webkit-transition: 0.2s ease-out;
       background-clip: padding-box;
       border: 2px solid #c93937;
-      border-radius: 2px;
       color: #c93937;
       display: inline-block;
       font-family: 'Questrial', Arial;
@@ -312,6 +321,7 @@
       text-decoration: none;
       text-transform: uppercase;
       transition: 0.2s ease-out;
+      cursor: pointer;
     }
     
     .cta:hover {
@@ -325,13 +335,13 @@
     .team-1 {
       position: absolute;
       left: 5%;
-      top: 48%;
+      top: 42%;
     }
     
     .team-2 {
       position: absolute;
       right: 5%;
-      top: 48%;
+      top: 42%;
     }
     /* modal dialogs */
     
@@ -352,7 +362,7 @@
         width: 50%;
       }
       .col-4 {
-        width: 33.33%;
+        width: 33.3%;
       }
     }
     
@@ -389,6 +399,7 @@
 </head>
 
 <body>
+  <h1>Team</h1>
   <div class="row">
     <div class="col-6 team-1">
       <div class="card transition">
@@ -409,17 +420,19 @@
       </div>
     </div>
   </div>
+  <br />
+  <br />
   <footer>
     <div class="row">
       <div class="col-6">
-        <p class="col-4 footer-contact" style="text-align:right; font-size:14px;">
+        <p class="col-6 footer-contact" style="text-align:right; font-size:14px;">
           <a href="#" alt="home">DEMETRATECH.EU</a>
           <br />
           <br /> Cap. Soc. 25.000 € i.v.
           <br /> P.IVA IT03676410362
           <br /> REA 408264
         </p>
-        <p class="col-4 footer-contact" style="text-align:left;font-size:14px;border-left:1px solid #fff;">
+        <p class="col-6 footer-contact" style="text-align:left;font-size:14px;border-left:1px solid #fff;">
           SEDE LEGALE
           <br />
           <br /> 41013 Castelfranco Emilia, via Picchioni 7
@@ -432,21 +445,13 @@
       </div>
     </div>
   </footer>
-  <amp-lightbox id="libero-contacts"
-      layout="nodisplay">
-    <div class="lightbox"
-        on="tap:libero-contacts.close"
-        role="button"
-        tabindex="0">
+  <amp-lightbox id="libero-contacts" layout="nodisplay">
+    <div class="lightbox" on="tap:libero-contacts.close" role="button" tabindex="0">
       <h1>Hello World!</h1>
     </div>
   </amp-lightbox>
-  <amp-lightbox id="laura-contacts"
-      layout="nodisplay">
-    <div class="lightbox"
-        on="tap:laura-contacts.close"
-        role="button"
-        tabindex="1">
+  <amp-lightbox id="laura-contacts" layout="nodisplay">
+    <div class="lightbox" on="tap:laura-contacts.close" role="button" tabindex="1">
       <h1>Hello World! It's really me!</h1>
     </div>
   </amp-lightbox>

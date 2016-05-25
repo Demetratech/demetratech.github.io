@@ -141,7 +141,7 @@
         
         footer a {
             text-decoration: none;
-            color: #fff;
+            color: #fff!important;
         }
         
         footer .row {
@@ -363,18 +363,21 @@
         }
         
         .-amp-accordion-header {
-            background: #fcdddd;
-            border: none;
+            background: #f9f2f2;
+            border: 2px solid #c93937;
         }
         
         section h1 {
             text-align: center;
+            color:#c93937;
             padding: .5em;
             -webkit-transition: background-color .3s, color .15s, box-shadow .3s, opacity 0.3s;
             transition: background-color .3s, color .15s, box-shadow .3s, opacity 0.3s;
         }
         
         section h1:hover {
+            color:#f9f2f2;
+            background-color:#c93937;
             -moz-box-shadow: 0 4px 8px 0 rgba(150, 15, 17, 0.2), 0 6px 20px 0 rgba(150, 15, 17, 0.19)!important;
             -webkit-box-shadow: 0 4px 8px 0 rgba(150, 15, 17, 0.2), 0 6px 20px 0 rgba(150, 15, 17, 0.19)!important;
             box-shadow: 0 4px 8px 0 rgba(150, 15, 17, 0.2), 0 6px 20px 0 rgba(150, 15, 17, 0.19)!important;
@@ -403,6 +406,7 @@
         }
         
         #clients .amp-carousel-button {
+            cursor:pointer;
             background-color: rgba(110, 15, 17, 1);
             -webkit-transition: background-color .3s, color .15s, box-shadow .3s, opacity 0.3s;
             transition: background-color .3s, color .15s, box-shadow .3s, opacity 0.3s;
