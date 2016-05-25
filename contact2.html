@@ -78,6 +78,7 @@
   <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <style>
+  
     /* responsive utilities */
     
     * {
@@ -98,11 +99,12 @@
       float: left;
       padding: 15px;
     }
+    
     /* Basic styles */
     
     html,
     body {
-      overflow: hidden;
+      overflow: scroll;
     }
     
     body {
@@ -134,9 +136,9 @@
     h1 {
       color: #c93937;
       font-family: 'Questrial', Arial;
-      font-size:28px;
-      text-align:center;
-      margin-bottom:1em;  
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 1em;
     }
     
     h2 {
@@ -175,8 +177,8 @@
     }
     
     .footer-contact {
-      position:relative;
-      display:inline-block;
+      position: relative;
+      display: inline-block;
       color: #f9f2f2;
       margin-top: 2em;
     }
@@ -304,7 +306,6 @@
       -moz-transition: 0.2s ease-out;
       -ms-transition: 0.2s ease-out;
       -o-transition: 0.2s ease-out;
-      -webkit-border-radius: 2px;
       -webkit-transition: 0.2s ease-out;
       background-clip: padding-box;
       border: 2px solid #c93937;
@@ -355,6 +356,130 @@
     .lightbox h1 {
       color: #f9f2f2;
     }
+    /* form starting stylings ------------------------------- */
+    
+    .group {
+      position: relative;
+      margin-bottom: 45px;
+    }
+    
+    input {
+      font-size: 18px;
+      padding: 10px 10px 10px 5px;
+      display: block;
+      width: 300px;
+      border: none;
+      border-bottom: 1px solid #757575;
+    }
+    
+    input:focus {
+      outline: none;
+    }
+    /* LABEL ======================================= */
+    
+    label {
+      color: #999;
+      font-size: 18px;
+      font-weight: normal;
+      position: absolute;
+      pointer-events: none;
+      left: 5px;
+      top: 10px;
+      transition: 0.2s ease all;
+      -moz-transition: 0.2s ease all;
+      -webkit-transition: 0.2s ease all;
+    }
+    /* active state */
+    
+    input:focus ~ label,
+    input:valid ~ label {
+      top: -20px;
+      font-size: 14px;
+      color: #5264AE;
+    }
+    /* BOTTOM BARS ================================= */
+    
+    .bar {
+      position: relative;
+      display: block;
+      width: 300px;
+    }
+    
+    .bar:before,
+    .bar:after {
+      content: '';
+      height: 2px;
+      width: 0;
+      bottom: 1px;
+      position: absolute;
+      background: #5264AE;
+      transition: 0.2s ease all;
+      -moz-transition: 0.2s ease all;
+      -webkit-transition: 0.2s ease all;
+    }
+    
+    .bar:before {
+      left: 50%;
+    }
+    
+    .bar:after {
+      right: 50%;
+    }
+    /* active state */
+    
+    input:focus ~ .bar:before,
+    input:focus ~ .bar:after {
+      width: 50%;
+    }
+    /* HIGHLIGHTER ================================== */
+    
+    .highlight {
+      position: absolute;
+      height: 60%;
+      width: 100px;
+      top: 25%;
+      left: 0;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+    /* active state */
+    
+    input:focus ~ .highlight {
+      -webkit-animation: inputHighlighter 0.3s ease;
+      -moz-animation: inputHighlighter 0.3s ease;
+      animation: inputHighlighter 0.3s ease;
+    }
+    /* ANIMATIONS ================ */
+    
+    @-webkit-keyframes inputHighlighter {
+      from {
+        background: #5264AE;
+      }
+      to {
+        width: 0;
+        background: transparent;
+      }
+    }
+    
+    @-moz-keyframes inputHighlighter {
+      from {
+        background: #5264AE;
+      }
+      to {
+        width: 0;
+        background: transparent;
+      }
+    }
+    
+    @keyframes inputHighlighter {
+      from {
+        background: #5264AE;
+      }
+      to {
+        width: 0;
+        background: transparent;
+      }
+    }
     /* media queries */
     
     @media screen and (min-width: 769px) {
@@ -382,14 +507,34 @@
     }
     
     @media screen and (max-width: 768px) {
+      
+      body{
+        margin-top:-8em!important;
+      }
       .col-6 {
         width: 100%;
       }
       .col-4 {
         width: 100%;
       }
+      
+      .team-1 {
+        position: absolute;
+        left: 0%;
+        top: 45%;
+      }
+      .team-2 {
+        position: absolute;
+        right: 0%;
+        top: 125%;
+      }
+      
       footer > .row >.col-6 > .col-6:first-child {
         border-right: 1px solid #fff;
+      }
+      footer {
+        top: 190%;
+        bottom: auto;
       }
       .footer-tablet {
         visibility: visible;
@@ -400,7 +545,7 @@
 
 <body>
   <h1>Team</h1>
-  <div class="row">
+  <div class="row" layout="container">
     <div class="col-6 team-1">
       <div class="card transition">
         <h2 class="transition">Libero Camellini</h2>
@@ -447,7 +592,7 @@
   </footer>
   <amp-lightbox id="libero-contacts" layout="nodisplay">
     <div class="lightbox" on="tap:libero-contacts.close" role="button" tabindex="0">
-      <h1>Hello World!</h1>
+      <h1>Send a Message to Libero</h1>
     </div>
   </amp-lightbox>
   <amp-lightbox id="laura-contacts" layout="nodisplay">

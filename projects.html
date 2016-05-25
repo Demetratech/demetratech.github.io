@@ -179,7 +179,8 @@
         .three {
             background-image: url(img/project-back.jpg);
             background-position: left center;
-            background-size: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
             min-height: 300px;
             align-items: flex-end;
             justify-content: flex-end;
@@ -304,14 +305,18 @@
                 opacity: 1;
             }
         }
-        
         /* dataviz */
         
-        .paper-div{
-            
+        .paper-div {
             padding: 1em;
             background: #f9f2f2;
             box-shadow: 0 4px 8px 0 rgba(150, 15, 17, 0.2), 0 6px 20px 0 rgba(150, 15, 17, 0.19)!important;
+        }
+        
+        .paper-div p {
+            width: 500px;
+            height: 400px;
+            text-align: center
         }
         
         paper-dropdown-menu {
@@ -327,23 +332,72 @@
         }
         
         .geo-github {
-            position:relative;
-            float:right;
-            top:15em;
+            position: relative;
+            float: right;
+            top: 15em;
         }
-        
         /* media queries */
         
         @media screen and (max-width: 768px) {
             html {
                 margin-top: -150px;
             }
+            .three {
+                background-image: url(img/project-back-device.jpg);
+                background-position: center center;
+            }
+            .paper-div p {
+                width: 300px;
+                height: 300px;
+                text-align: center
+            }
+            .container-map-small {
+                position: relative;
+                left: -26%;
+            }
+            .geo-github {
+                position: relative;
+                float: right;
+                top: 8.5em;
+            }
+        }
+        
+        @media screen and (max-width: 450px) {
+            .one {
+                background-image:url(img/vintage-device.jpg);
+                background-position: center center;
+            }
+            .two {
+                background-image:url(img/Change-device.jpg);
+            }
+            .three {
+                align-items: flex-start;
+                justify-content: center;
+            }
+            .dataviz {
+                display: block;
+                align-items: flex-start;
+                justify-content: flex-start;
+            }
+            .dataviz h1 {
+                width: 89%;
+                text-align: center;
+            }
+            .paper-div {
+                width: 93%;
+                min-height: 300px;
+            }
+            .geo-github {
+                position: relative;
+                float: right;
+                top: 9em;
+            }
         }
     </style>
     <div class='one'>
         <br />
         <div class="dt-opacity">
-            <p class="dt-animate" style="font-size:24px;font-weight:bold;color:#fcdddd;background-color:rgba(150, 15, 17, 0.45);padding:2em 3em;">Get Vintage.</p>
+            <p class="dt-animate" style="font-size:24px;font-weight:bold;color:#fcdddd;background-color:rgba(150, 15, 17, 0.45);padding:2em 3em;border: 2px solid #fcdddd;">Get Vintage.</p>
         </div>
     </div>
 
@@ -358,15 +412,15 @@
         <br />
         <br />
         <div class="dt-opacity">
-            <p class="dt-animate" style="font-size:24px;font-weight:bold;color:#fcdddd;background-color:rgba(150, 15, 17, 0.45);padding:2em 3em;">Lets make it happen.</p>
+            <p class="dt-animate" style="font-size:24px;font-weight:bold;color:#fcdddd;background-color:rgba(150, 15, 17, 0.45);padding:2em 3em;border: 2px solid #fcdddd;">Lets make it happen.</p>
         </div>
     </div>
 
-    <div>
+    <div class="dataviz">
         <h1>Interactive <span itemprop="keyword">data visualizations</span></h1>
         <br />
         <div class="paper-div">
-            <p style="width:500px;height:400px;text-align:center" layout="responsive">Urban waste sample visualization. Data source is <a alt="open data source" href="http://dati.arpa.emr.it/">Here</a>. Visualization html5 sources are <a alt="html5 source and repository" href="http://www.jeeltcraft.com/sappiamo/chart-webcomponents/single-demo.html">Here</a>. 
+            <p layout="responsive">Urban waste sample visualization. Data source is <a alt="open data source" href="http://dati.arpa.emr.it/">Here</a>. Visualization html5 sources are <a alt="html5 source and repository" href="http://www.jeeltcraft.com/sappiamo/chart-webcomponents/single-demo.html">Here</a>.
                 <template is="auto-binding" id="post-theme">
                     <br />
                     <br />
@@ -408,7 +462,7 @@
     </div>
     <div class='three'>
         <div class="dt-opacity">
-            <p class="dt-animate" style="font-size:24px;font-weight:bold;color:#fcdddd;background-color:rgba(150, 15, 17, 0.45);padding:2em 3em;">Fits your web needs.</p>
+            <p class="dt-animate" style="font-size:24px;font-weight:bold;color:#fcdddd;background-color:rgba(150, 15, 17, 0.45);padding:2em 3em;border: 2px solid #fcdddd;">Fits your web needs.</p>
         </div>
     </div>
 </body>

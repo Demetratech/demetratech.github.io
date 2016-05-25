@@ -100,7 +100,6 @@
       float: left;
       padding: 15px;
     }
-    
     /* loader */
     
     .wait {
@@ -138,7 +137,6 @@
       }
     }
     
-    
     @-moz-keyframes loadingJ {
       0%, 100% {
         transform: translate(0, 0);
@@ -149,7 +147,6 @@
         width: 25px;
       }
     }
-    
     
     @-ms-keyframes loadingJ {
       0%, 100% {
@@ -183,8 +180,6 @@
         width: 25px;
       }
     }
-    
-    
     /* basic styles */
     
     html,
@@ -241,74 +236,6 @@
     
     .menu-right a:hover {
       color: #700f11;
-    }
-    
-    /*media queries */
-    
-    @media screen and (min-width: 769px) {
-      header {
-        height: 60px;
-      }
-      .menu-right {
-        padding-top: 2.3em;
-      }
-      .col-1 {
-        width: 8.33%;
-      }
-      .col-2 {
-        width: 16.66%;
-      }
-      .col-3 {
-        width: 25%;
-      }
-      .col-4 {
-        width: 33.33%;
-      }
-      .col-5 {
-        width: 41.66%;
-      }
-      .col-6 {
-        width: 50%;
-      }
-      .col-7 {
-        width: 58.33%;
-      }
-      .col-8 {
-        width: 66.66%;
-      }
-      .col-9 {
-        width: 75%;
-      }
-      .col-10 {
-        width: 83.33%;
-      }
-      .col-11 {
-        width: 91.66%;
-      }
-      .col-12 {
-        width: 100%;
-      }
-    }
-    
-    @media screen and (max-width: 768px) {
-      [class*="col-"] {
-        width: 100%;
-      }
-      header {
-        height: 9.4em;
-        background-color: rgba(250, 220, 220, 1);
-      }
-      header .row {
-        text-align: center;
-      }
-      viewer[data-show-container="2"] #container2 {
-        visibility: visible;
-        margin-top: 9.4em;
-      }
-      viewer[data-show-container="3"] #container3 {
-        visibility: visible;
-        margin-top: 9.4em;
-      }
     }
     
     header h1 {
@@ -383,6 +310,77 @@
     
     viewer.natural container iframe {
       height: 100%;
+    }
+    /*media queries */
+    
+    @media screen and (min-width: 769px) {
+      header {
+        height: 60px;
+      }
+      .menu-right {
+        padding-top: 2.3em;
+      }
+      .col-1 {
+        width: 8.33%;
+      }
+      .col-2 {
+        width: 16.66%;
+      }
+      .col-3 {
+        width: 25%;
+      }
+      .col-4 {
+        width: 33.33%;
+      }
+      .col-5 {
+        width: 41.66%;
+      }
+      .col-6 {
+        width: 50%;
+      }
+      .col-7 {
+        width: 58.33%;
+      }
+      .col-8 {
+        width: 66.66%;
+      }
+      .col-9 {
+        width: 75%;
+      }
+      .col-10 {
+        width: 83.33%;
+      }
+      .col-11 {
+        width: 91.66%;
+      }
+      .col-12 {
+        width: 100%;
+      }
+    }
+    
+    @media screen and (max-width: 768px) {
+      [class*="col-"] {
+        width: 100%;
+      }
+      header {
+        height: 9.4em;
+        background-color: rgba(250, 220, 220, 1);
+      }
+      header .row {
+        text-align: center;
+      }
+      viewer[data-show-container="2"] #container2 {
+        visibility: visible;
+        margin-top: 9.4em;
+      }
+      viewer[data-show-container="3"] #container3 {
+        visibility: visible;
+        margin-top: 9.4em;
+      }
+      .wait {
+        top: 50%;
+        left: 28%;
+      }
     }
   </style>
 
