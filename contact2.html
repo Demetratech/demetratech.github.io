@@ -78,7 +78,6 @@
   <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <style>
-  
     /* responsive utilities */
     
     * {
@@ -99,7 +98,6 @@
       float: left;
       padding: 15px;
     }
-    
     /* Basic styles */
     
     html,
@@ -351,138 +349,151 @@
       width: 100%;
       height: 100%;
       position: absolute;
+      text-align: center;
     }
     
     .lightbox h1 {
       color: #f9f2f2;
     }
+    
+    .lightbox form {
+      text-align: center;
+      padding: 1em;
+    }
+    
+    .lightbox a {
+      margin: 10px;
+      padding: 10px 15px;
+      border: 2px solid #f9f2f2;
+      cursor: pointer;
+      display: inline-block;
+      color: #f9f2f2;
+      text-transform: uppercase;
+    }
+    
+    .lightbox a:hover {
+      background-color: #f9f2f2;
+      color: #c93937;
+      font-weight: bold;
+      box-shadow: 0 8px 17px 0 rgba(0, 0, 10, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-weight: bold;
+      padding: 5px 8px!important;
+    }
     /* form starting stylings ------------------------------- */
     
-    .group {
+    form {
+      background: #700f11;
+      width: 90%;
+      margin: 0 auto;
+    }
+    
+    .group,
+    .group-message {
       position: relative;
+      margin-top: 1em;
       margin-bottom: 45px;
     }
     
-    input {
-      font-size: 18px;
-      padding: 10px 10px 10px 5px;
-      display: block;
-      width: 300px;
-      border: none;
-      border-bottom: 1px solid #757575;
+    .group-message {
+      width: 98%;
+      margin: 0 auto;
+      background: transparent;
     }
     
-    input:focus {
+    input,
+    textarea {
+      font-size: 18px;
+      font-family: 'Questrial', Arial;
+      padding: 10px 10px 10px 5px;
+      display: block;
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #c93937;
+      background: transparent;
+      color: #f9f2f2;
+    }
+    
+    .group-message textarea {
+      height: 200px;
+      padding: 20px 10px;
+      line-height: 24px;
+    }
+    
+    input:focus,
+    textarea:focus {
       outline: none;
     }
     /* LABEL ======================================= */
     
     label {
-      color: #999;
+      color: #f9f2f2;
       font-size: 18px;
       font-weight: normal;
       position: absolute;
       pointer-events: none;
-      left: 5px;
-      top: 10px;
+      left: 15px;
+      top: 30px;
       transition: 0.2s ease all;
       -moz-transition: 0.2s ease all;
       -webkit-transition: 0.2s ease all;
     }
+    
+    .dt-message {
+      top: 180px;
+    }
     /* active state */
     
     input:focus ~ label,
-    input:valid ~ label {
-      top: -20px;
+    input:valid ~ label,
+    textarea:focus ~ label {
+      top: -5px;
       font-size: 14px;
-      color: #5264AE;
+      color: #c93937;
     }
     /* BOTTOM BARS ================================= */
     
-    .bar {
+    .bbar {
       position: relative;
       display: block;
-      width: 300px;
+      width: 100%;
     }
     
-    .bar:before,
-    .bar:after {
+    .bbar:before,
+    .bbar:after {
       content: '';
       height: 2px;
       width: 0;
       bottom: 1px;
       position: absolute;
-      background: #5264AE;
+      background: #f9f2f2;
       transition: 0.2s ease all;
       -moz-transition: 0.2s ease all;
       -webkit-transition: 0.2s ease all;
     }
     
-    .bar:before {
+    .bbar:before {
       left: 50%;
     }
     
-    .bar:after {
+    .bbar:after {
       right: 50%;
     }
     /* active state */
     
-    input:focus ~ .bar:before,
-    input:focus ~ .bar:after {
+    input:focus ~ .bbar:before,
+    input:focus ~ .bbar:after {
       width: 50%;
-    }
-    /* HIGHLIGHTER ================================== */
-    
-    .highlight {
-      position: absolute;
-      height: 60%;
-      width: 100px;
-      top: 25%;
-      left: 0;
-      pointer-events: none;
-      opacity: 0.5;
-    }
-    /* active state */
-    
-    input:focus ~ .highlight {
-      -webkit-animation: inputHighlighter 0.3s ease;
-      -moz-animation: inputHighlighter 0.3s ease;
-      animation: inputHighlighter 0.3s ease;
-    }
-    /* ANIMATIONS ================ */
-    
-    @-webkit-keyframes inputHighlighter {
-      from {
-        background: #5264AE;
-      }
-      to {
-        width: 0;
-        background: transparent;
-      }
-    }
-    
-    @-moz-keyframes inputHighlighter {
-      from {
-        background: #5264AE;
-      }
-      to {
-        width: 0;
-        background: transparent;
-      }
-    }
-    
-    @keyframes inputHighlighter {
-      from {
-        background: #5264AE;
-      }
-      to {
-        width: 0;
-        background: transparent;
-      }
     }
     /* media queries */
     
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 768px) {
       .col-6 {
         width: 50%;
       }
@@ -504,12 +515,19 @@
         opacity: .6;
         visibility: visible;
       }
+      .team-1{
+        top:35%;
+        left:1%;
+      }
+      .team-2{
+        top:35%;
+        right:1%;
+      }
     }
     
-    @media screen and (max-width: 768px) {
-      
-      body{
-        margin-top:-8em!important;
+    @media screen and (max-width: 767px) {
+      body {
+        margin-top: -8em!important;
       }
       .col-6 {
         width: 100%;
@@ -517,7 +535,6 @@
       .col-4 {
         width: 100%;
       }
-      
       .team-1 {
         position: absolute;
         left: 0%;
@@ -528,7 +545,6 @@
         right: 0%;
         top: 125%;
       }
-      
       footer > .row >.col-6 > .col-6:first-child {
         border-right: 1px solid #fff;
       }
@@ -538,6 +554,30 @@
       }
       .footer-tablet {
         visibility: visible;
+      }
+      .lightbox {
+        overflow: scroll;
+      }
+      
+      .lightbox h1 {
+        font-size: 22px;
+        line-height: 24px;
+      }
+      .group,
+      .group-message {
+        margin: 0;
+      }
+      .group-message textarea {
+        height: 100px;
+        padding: 20px 10px;
+        line-height: 24px;
+      }
+      .dt-message {
+        top: 70px;
+      }
+      .close {
+        top:2px;
+        right:2px;
       }
     }
   </style>
@@ -591,13 +631,75 @@
     </div>
   </footer>
   <amp-lightbox id="libero-contacts" layout="nodisplay">
-    <div class="lightbox" on="tap:libero-contacts.close" role="button" tabindex="0">
+    <div class="lightbox">
       <h1>Send a Message to Libero</h1>
+      <form layout="fill">
+        <div class="row">
+          <div class="group col-6">
+            <input type="text" required>
+            <span class="bbar"></span>
+            <label>Name</label>
+          </div>
+          <div class="group col-6">
+            <input type="text" required>
+            <span class="bbar"></span>
+            <label>Email</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="group-message">
+            <textarea type="text" maxlength="10000" rows="20" layout="fill" required></textarea>
+            <span class="bbar"></span>
+            <label class="dt-message">Message</label>
+          </div>
+        </div>
+        <br />
+        <a style="float:right;" href="" role="button">Send</a>
+        <span style="clear:both;"></span>
+        <br />
+        <br />
+        <br />
+        <br />
+      </form>
+      <div class="row" style="text-align:center;">
+        <a class="close" on="tap:libero-contacts.close" role="button" tabindex="0">X</a>
+      </div>
     </div>
   </amp-lightbox>
   <amp-lightbox id="laura-contacts" layout="nodisplay">
-    <div class="lightbox" on="tap:laura-contacts.close" role="button" tabindex="1">
-      <h1>Hello World! It's really me!</h1>
+    <div class="lightbox">
+      <h1>Send a Message to Laura</h1>
+      <form layout="fill">
+        <div class="row">
+          <div class="group col-6">
+            <input type="text" required>
+            <span class="bbar"></span>
+            <label>Name</label>
+          </div>
+          <div class="group col-6">
+            <input type="text" required>
+            <span class="bbar"></span>
+            <label>Email</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="group-message">
+            <textarea type="text" maxlength="10000" rows="20" layout="fill" required></textarea>
+            <span class="bbar"></span>
+            <label class="dt-message">Message</label>
+          </div>
+        </div>
+        <br />
+        <a style="float:right;" href="" role="button">Send</a>
+        <span style="clear:both;"></span>
+        <br />
+        <br />
+        <br />
+        <br />
+      </form>
+      <div class="row" style="text-align:center;">
+        <a class="close" on="tap:laura-contacts.close" role="button" tabindex="1">X</a>
+      </div>
     </div>
   </amp-lightbox>
 </body>
