@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>AMP #0</title>
-    <link rel="canonical" href="amps.html">
+    <link rel="canonical" href="http://demetratech.github.io/carousel.html"">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
@@ -859,5 +859,27 @@
             </div>
         </div>
     </footer>
-
+    <amp-analytics type="googleanalytics" id="analytics2">
+        <script type="application/json">
+            <script type="application/json">
+            { "vars": { 
+                "account": "UA-78444129-1" 
+            }, 
+                "triggers": { 
+                    "trackPageview": { 
+                        "on": "visible",
+                        "request": "pageview" 
+                },
+                "trackAnchorClicks": {
+                    "on": "click",
+                    "selector": "a",
+                    "request": "event",
+                    "vars": {
+                    "eventId": "home-page-link",
+                    "eventLabel": "clicked on a home link"
+                } } }
+        </script>
+        </script>
+    </amp-analytics>
+</body>
 </html>

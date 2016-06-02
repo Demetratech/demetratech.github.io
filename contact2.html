@@ -4,10 +4,12 @@
 <head>
   <meta charset="utf-8">
   <title>Demetratech</title>
-  <link rel="canonical" href="http://demetratech.github.io/index.html" />
+  <link rel="canonical" href="http://demetratech.github.io/contact2.html" />
   <link rel='shortcut icon' type='image/x-icon' href='http://demetratech.github.io/favicon.ico' />
   <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
   <script type="application/ld+json">
     { "@context": "http://schema.org", "@type": "ContactPage", "headline": "Demetratech web services", "datePublished": "2016-04-05T08:00:00+08:00", "dateModified": "2016-04-05T09:20:00+08:00", "author": { "@type": "Person", "name": "Laura Camellini" }, "publisher":
     { "@type": "Organization", "name": "Demetratech", "logo": { "@type": "ImageObject", "url": "https://demetratech.github.io/logo.png", "width": 200, "height": 60 } }, "description": "Demetratech, Team and contacts" }
@@ -603,7 +605,7 @@
     <div class="col-6 team-2">
       <div class="card transition">
         <h2 class="transition">Laura Camellini</h2>
-        <p>Web Designer as <a href="http://jeeltcraft.com">Jeeltcraft</a>. For hiring and reputation please see <a href="ttp://www.twago.com/p/demetratech/98968">twago</a>
+        <p>Web Designer as <a target="_blank" alt="blog" href="http://jeeltcraft.com">Jeeltcraft</a>. For hiring and reputation please see <a target="_blank" alt="marketplace" href="ttp://www.twago.com/p/demetratech/98968">twago</a>
           <br />GPG encrypted mail are appreciated.
         </p>
         <div class="cta-container transition"><a on="tap:laura-contacts" role="button" tabindex="1" class="cta">Contact her</a></div>
@@ -708,6 +710,26 @@
       </div>
     </div>
   </amp-lightbox>
+      <amp-analytics type="googleanalytics" id="analytics4">
+            <script type="application/json">
+            { "vars": { 
+                "account": "UA-78444129-1" 
+            }, 
+                "triggers": { 
+                    "trackPageview": { 
+                        "on": "visible",
+                        "request": "pageview" 
+                },
+                "trackAnchorClicks": {
+                    "on": "click",
+                    "selector": "a",
+                    "request": "event",
+                    "vars": {
+                    "eventId": "contact-link",
+                    "eventLabel": "clicked on a contact link"
+                } } }
+        </script>
+    </amp-analytics>
 </body>
 
 </html>

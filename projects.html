@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="canonical" href="amps.html">
+    <link rel="canonical" href="http://demetratech.github.io/projects.html>
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
     <link rel="import" href="chart-webcomponents/bower_components/polymer/polymer.html">
@@ -458,7 +458,7 @@
                         </script>
                     </div>
                 </template>
-                <a class="geo-github" href="http://www.jeeltcraft.com/sappiamo/chart-webcomponents/single-demo.html" alt="github html5 dataviz freebie">Fork on github</a>
+                <a class="geo-github" target="_blank" href="http://www.jeeltcraft.com/sappiamo/chart-webcomponents/single-demo.html" alt="github html5 dataviz freebie">Fork on github</a>
             </p>
         </div>
     </div>
@@ -467,6 +467,26 @@
             <p class="dt-animate" style="font-size:24px;font-weight:bold;color:#fcdddd;background-color:rgba(150, 15, 17, 0.45);padding:2em 3em;border: 2px solid #fcdddd;">Fits your web needs.</p>
         </div>
     </div>
+        <amp-analytics type="googleanalytics" id="analytics3">
+        <script type="application/json">
+            { "vars": { 
+                "account": "UA-78444129-1" 
+            }, 
+                "triggers": { 
+                    "trackPageview": { 
+                        "on": "visible",
+                        "request": "pageview" 
+                },
+                "trackAnchorClicks": {
+                    "on": "click",
+                    "selector": "a",
+                    "request": "event",
+                    "vars": {
+                    "eventId": "42",
+                    "eventLabel": "clicked on a link"
+                } } }
+        </script>
+    </amp-analytics>
 </body>
 
 </html>

@@ -11,9 +11,10 @@
   <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
   <script type="application/ld+json">
     { "@context": "http://schema.org", "@type": "WebSite", "headline": "Demetratech web services", "datePublished": "2016-04-05T08:00:00+08:00", "dateModified": "2016-04-05T09:20:00+08:00", "author": { "@type": "Person", "name": "Laura Camellini" }, "publisher":
-    { "@type": "Organization", "name": "Demetratech", "logo": { "@type": "ImageObject", "url": "https://demetratech.github.io/logo_dt.jpg", "width": 200, "height": 60 } }, "description": "Demetratech, web for the wintage world" }
+    { "@type": "Organization", "name": "Demetratech", "logo": { "@type": "ImageObject", "url": "https://demetratech.github.io/logo.png", "width": 200, "height": 60 } }, "description": "Demetratech, web for the wintage world" }
   </script>
   <style amp-boilerplate>
     body {
@@ -741,6 +742,46 @@
       </div>
     </container>
   </viewer>
+  <amp-analytics type="googleanalytics" id="analytics1">
+  <script type="application/json">
+  {
+    "vars": {
+      "account": "UA-78444129-1"
+    },
+    "triggers": {
+      "trackPageview": {
+        "on": "visible",
+        "request": "pageview"
+      },
+      "trackEvent": {
+        "selector": "#show-container1-anchor",
+        "on": "click",
+        "request": "event",
+        "vars": {
+          "eventCategory": "ui-components",
+          "eventAction": "click"
+        },
+        "trackEvent": {
+        "selector": "#show-container2-anchor",
+        "on": "click",
+        "request": "event",
+        "vars": {
+          "eventCategory": "ui-components",
+          "eventAction": "click"
+        },
+        "trackEvent": {
+        "selector": "#show-container3-anchor",
+        "on": "click",
+        "request": "event",
+        "vars": {
+          "eventCategory": "ui-components",
+          "eventAction": "click"
+        }
+      }
+    }
+  }
+  </script>
+  </amp-analytics>
 </body>
 
 </html>
