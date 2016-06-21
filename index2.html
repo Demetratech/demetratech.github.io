@@ -514,7 +514,7 @@
         this.container.style.paddingTop = '200px';
         this.container.style.paddingLeft = '50px';
         this.container.textContent =
-          'LOADING';
+          'LOADING.. please refresh the page after 4 seconds';
       }).bind(this);
     };
     Viewer.prototype.documentReady_ = function() {
@@ -775,7 +775,7 @@
         "request": "event",
         "vars": {
           "eventCategory": "ui-components",
-          "eventAction": "click"
+          "eventAction": "header-click"
         }
       }
     }

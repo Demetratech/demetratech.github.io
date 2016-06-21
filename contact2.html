@@ -355,6 +355,7 @@
     }
     
     .lightbox h1 {
+      margin-top:3em;
       color: #f9f2f2;
     }
     
@@ -373,7 +374,8 @@
       text-transform: uppercase;
     }
     
-    .lightbox a:hover {
+    .lightbox a:hover,
+    .submit-input:hover {
       background-color: #f9f2f2;
       color: #c93937;
       font-weight: bold;
@@ -389,6 +391,7 @@
       padding: 5px 8px!important;
       cursor:pointer;
     }
+    
     /* form starting stylings ------------------------------- */
     
     form {
@@ -421,6 +424,18 @@
       border-bottom: 1px solid #c93937;
       background: transparent;
       color: #f9f2f2;
+    }
+    
+    .submit-input {
+      float:right;
+      margin: 10px;
+      padding: 10px 15px;
+      border: 2px solid #f9f2f2;
+      cursor: pointer;
+      display: block;
+      color: #f9f2f2;
+      text-transform: uppercase;
+      width:10%;
     }
     
     .group-message textarea {
@@ -565,6 +580,7 @@
       }
       
       .lightbox h1 {
+        margin-top:3em;
         font-size: 22px;
         line-height: 24px;
       }
@@ -641,29 +657,30 @@
   <amp-lightbox id="libero-contacts" layout="nodisplay">
     <div class="lightbox">
       <h1>Send a Message to Libero</h1>
-      <form layout="fill">
+      <form layout="fill" action="https://formspree.io/libmisty@demetratech.eu" method="POST">
         <div class="row">
           <div class="group col-6">
-            <input type="text" required>
+            <input type="text" name="dt_name" required>
             <span class="bbar"></span>
-            <label>Name</label>
+            <label for="dt-name">Name</label>
           </div>
           <div class="group col-6">
-            <input type="text" required>
+            <input type="email" name="_replyto" required>
             <span class="bbar"></span>
-            <label>Email</label>
+            <label for="_replyto">Email</label>
           </div>
         </div>
         <div class="row">
           <div class="group-message">
-            <textarea type="text" maxlength="10000" rows="20" layout="fill" required></textarea>
+            <textarea type="text" name="dt-message" maxlength="10000" rows="20" layout="fill" required></textarea>
             <span class="bbar"></span>
-            <label class="dt-message">Message</label>
+            <label class="dt-message" for="dt-message">Message</label>
           </div>
         </div>
         <br />
-        <a style="float:right;" href="" role="button">Send</a>
+        <input class="submit-input" href="" type="submit" value="Send" id="submit-libero">
         <span style="clear:both;"></span>
+        <input type="hidden" name="_next" value="http://www.demetratech.com" target="_blank"/>
         <br />
         <br />
         <br />
@@ -677,17 +694,17 @@
   <amp-lightbox id="laura-contacts" layout="nodisplay">
     <div class="lightbox">
       <h1>Send a Message to Laura</h1>
-      <form layout="fill">
+      <form layout="fill" action="https://formspree.io/jeeltcraft@demetratech.eu" method="POST">
         <div class="row">
           <div class="group col-6">
-            <input type="text" required>
+            <input type="text" name="dt_name" required>
             <span class="bbar"></span>
-            <label>Name</label>
+            <label for="dt-name">Name</label>
           </div>
           <div class="group col-6">
-            <input type="text" required>
+            <input type="email" name="_replyto" required>
             <span class="bbar"></span>
-            <label>Email</label>
+            <label for="_replyto">Email</label>
           </div>
         </div>
         <div class="row">
@@ -698,8 +715,9 @@
           </div>
         </div>
         <br />
-        <a style="float:right;" href="" role="button">Send</a>
+        <input class="submit-input" href="" type="submit" value="Send" id="submit-laura">
         <span style="clear:both;"></span>
+        <input type="hidden" name="_next" value="/contact2.html"/>
         <br />
         <br />
         <br />
