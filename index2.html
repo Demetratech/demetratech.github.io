@@ -4,14 +4,13 @@
 <head>
   <meta charset="utf-8">
   <link rel="canonical" href="http://demetratech.github.io/index.html" />
-  <link rel='shortcut icon' type='image/x-icon' href='http://demetratech.github.io/favicon.ico' />
+  <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
   <title>Demetratech - Web for the vintage world</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
   <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
-  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
   <script type="application/ld+json">
     { "@context": "http://schema.org", "@type": "WebSite", "headline": "Demetratech web services", "datePublished": "2016-04-05T08:00:00+08:00", "dateModified": "2016-04-05T09:20:00+08:00", "author": { "@type": "Person", "name": "Laura Camellini" }, "publisher":
     { "@type": "Organization", "name": "Demetratech", "logo": { "@type": "ImageObject", "url": "https://demetratech.github.io/logo.png", "width": 200, "height": 60 } }, "description": "Demetratech, web for the wintage world" }
@@ -82,10 +81,20 @@
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <style>
     /* responsive utilities */
-    
-    * {
-      box-sizing: border-box;
-    }
+          
+        body,
+        header,
+        section,
+        div,
+        a,
+        span,
+        p,
+        h1,
+        footer,
+        amp-img
+        {
+            box-sizing: border-box;
+        }
     
     .row {
       width: 100%;
@@ -101,26 +110,26 @@
       float: left;
       padding: 15px;
     }
+    
     /* loader */
     
     .wait {
       position: absolute;
       z-index: 3;
-      top: 50%;
-      left: 45%;
-      width: 100px;
+      top: 60px;
+      left: 0;
+      width: 100%;
       height: 100px;
-      margin: 0 10px 10px 0;
-      padding: 20px 20px 20px;
+      margin: 0;
+      padding: 0;
       text-align: center;
     }
     
     .bar {
       float: left;
-      width: 15px;
-      height: 6px;
-      border-radius: 2px;
-      background-color: #0c6351;
+      width: 100%;
+      height: 3px;
+      background-color: #f9f2f2;
     }
     
     .wait .bar {
@@ -134,7 +143,7 @@
       50% {
         transform: translate(80px, 0);
         background-color: #c93937;
-        width: 25px;
+        width: 25%;
       }
     }
     
@@ -145,7 +154,7 @@
       50% {
         transform: translate(80px, 0);
         background-color: #c93937;
-        width: 25px;
+        width: 25%;
       }
     }
     
@@ -156,7 +165,7 @@
       50% {
         transform: translate(80px, 0);
         background-color: #c93937;
-        width: 25px;
+        width: 25%;
       }
     }
     
@@ -167,7 +176,7 @@
       50% {
         transform: translate(80px, 0);
         background-color: #c93937;
-        width: 25px;
+        width: 25%;
       }
     }
     
@@ -178,7 +187,7 @@
       50% {
         transform: translate(80px, 0);
         background-color: #c93937;
-        width: 25px;
+        width: 25%;
       }
     }
     /* basic styles */
@@ -378,8 +387,8 @@
         margin-top: 9.4em;
       }
       .wait {
-        top: 50%;
-        left: 28%;
+        top: 150px;
+        left: 0;
       }
     }
   </style>
@@ -514,7 +523,7 @@
         this.container.style.paddingTop = '200px';
         this.container.style.paddingLeft = '50px';
         this.container.textContent =
-          'LOADING.. please refresh the page after 4 seconds';
+          'LOADING...          please refresh the page after 4 seconds';
       }).bind(this);
     };
     Viewer.prototype.documentReady_ = function() {
@@ -743,7 +752,7 @@
     </container>
   </viewer>
   <amp-analytics type="googleanalytics" id="analytics1">
-  <script type="application/json">
+<script type="application/json">
   {
     "vars": {
       "account": "UA-78444129-1"
@@ -760,8 +769,10 @@
         "vars": {
           "eventCategory": "ui-components",
           "eventAction": "click"
-        },
-        "trackEvent": {
+        }
+
+      },
+      "trackEvent": {
         "selector": "#show-container2-anchor",
         "on": "click",
         "request": "event",
@@ -769,7 +780,8 @@
           "eventCategory": "ui-components",
           "eventAction": "click"
         },
-        "trackEvent": {
+      },
+      "trackEvent": {
         "selector": "#show-container3-anchor",
         "on": "click",
         "request": "event",
@@ -780,7 +792,7 @@
       }
     }
   }
-  </script>
+</script>
   </amp-analytics>
 </body>
 

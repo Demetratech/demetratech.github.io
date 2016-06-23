@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Demetratech</title>
   <link rel="canonical" href="http://demetratech.github.io/contact2.html" />
-  <link rel='shortcut icon' type='image/x-icon' href='http://demetratech.github.io/favicon.ico' />
+  <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
   <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <script async src="https://cdn.ampproject.org/v0.js"></script>
@@ -80,11 +80,23 @@
   <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <style>
+  
     /* responsive utilities */
     
-    * {
-      box-sizing: border-box;
-    }
+         
+        body,
+        header,
+        section,
+        div,
+        a,
+        span,
+        p,
+        h1,
+        footer,
+        amp-img
+        {
+            box-sizing: border-box;
+        }
     
     .row {
       width: 100%;
@@ -112,6 +124,7 @@
       font-size: 16px;
       color: #c93937;
       background-color: #f9f2f2;
+      border-top:none!important;
     }
     
     .color {
@@ -546,9 +559,6 @@
     }
     
     @media screen and (max-width: 768px) {
-      body {
-        margin-top: -8em!important;
-      }
       .col-6 {
         width: 100%;
       }
@@ -745,7 +755,7 @@
                     "vars": {
                     "eventId": "contact-link",
                     "eventLabel": "clicked on a contact link"
-                } } }
+                } } } }
         </script>
     </amp-analytics>
 </body>

@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <title>AMP #0</title>
-    <link rel="canonical" href="http://demetratech.github.io/carousel.html"">
+    <title>About</title>
+    <link rel="canonical" href="http://demetratech.github.io/carousel.html">
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
@@ -81,7 +82,19 @@
     <style amp-custom>
         /* responsive utilities */
         
-        * {
+        body,
+        header,
+        section,
+        div,
+        a,
+        span,
+        p,
+        h1,
+        footer,
+        amp-img,
+        amp-accordion,
+        amp-carousel
+        {
             box-sizing: border-box;
         }
         
@@ -175,10 +188,6 @@
             background-color: #700f11;
         }
         /* Main Carousel */
-        
-        .amp-carousel-button {
-            background-color: rgba(110, 15, 17, .5);
-        }
         
         .caption {
             position: absolute;
@@ -412,7 +421,7 @@
             margin-top: .6em;
         }
         
-        #clients .amp-carousel-button {
+        .amp-carousel-button {
             cursor:pointer;
             background-color: rgba(110, 15, 17, 1);
             -webkit-transition: background-color .3s, color .15s, box-shadow .3s, opacity 0.3s;
@@ -434,7 +443,7 @@
             text-align: center;
         }
         
-        #clients .amp-carousel-button:hover,
+        .amp-carousel-button:hover,
         #clients a:hover {
             -moz-box-shadow: 0 4px 8px 0 rgba(150, 15, 17, 0.2), 0 6px 20px 0 rgba(150, 15, 17, 0.19);
             -webkit-box-shadow: 0 4px 8px 0 rgba(150, 15, 17, 0.2), 0 6px 20px 0 rgba(150, 15, 17, 0.19);
@@ -443,160 +452,59 @@
         
         /* Photo slide */
         
-        .pcss3-accordion {
-            margin-top: 1em;
-            overflow: hidden;
-            border: 5px solid #f9f2f2;
-            -webkit-box-shadow: 0 4px 8px 0 rgba(150, 15, 17, 0.2), 0 6px 20px 0 rgba(150, 15, 17, 0.19);
-            -moz-box-shadow: 0 4px 8px 0 rgba(150, 15, 17, 0.2), 0 6px 20px 0 rgba(150, 15, 17, 0.19);
-            box-shadow: 0 4px 8px 0 rgba(150, 15, 17, 0.2), 0 6px 20px 0 rgba(150, 15, 17, 0.19);
-        }
-        
-        .pcss3-accordion-item {
-            position: absolute;
-            z-index: 1;
-            top: 0;
-            width: 100%;
-            background: #f9f2f2;
-            -webkit-box-shadow: 0 0 0 1px #f9f2f2;
-            -moz-box-shadow: 0 0 0 1px #f9f2f2;
-            box-shadow: 0 0 0 1px #f9f2f2;
-            transition: all 0.3s linear;
-            -o-transition: all 0.3s linear;
-            -ms-transition: all 0.3s linear;
-            -moz-transition: all 0.3s linear;
-            -webkit-transition: all 0.3s linear;
-        }
-        
-        .pcss3-accordion-item:first-child {
-            position: relative;
-            left: 0 !important;
-            width: 70%;
-        }
-        
-        .pcss3-accordion-pic {
-            position: relative;
-            display: block;
-            width: 100%;
-            opacity: 0.8;
-            transition: opacity 0.2s;
-            -o-transition: opacity 0.2s;
-            -ms-transition: opacity 0.2s;
-            -moz-transition: opacity 0.2s;
-            -webkit-transition: opacity 0.2s;
-        }
-        
-        .pcss3-accordion-input {
-            position: absolute;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            border: 0;
-            cursor: pointer;
-            opacity: 0;
-        }
-        
-        .pcss3-accordion-input:checked {
-            width: 0;
-        }
-        
-        .pcss3-accordion-input:hover ~ .pcss3-accordion-pic {
-            opacity: 1;
-        }
-        
-        .pcss3-accordion-input:checked ~ .pcss3-accordion-pic {
-            opacity: 1;
-        }
-        
-        .pcss3-accordion-input:checked ~ .pcss3-accordion-item {
-            left: 100%;
-        }
-        
-        .pcss3-accordion4 .pcss3-accordion-item {
-            left: 15%;
-        }
         
         /**/
         /* caption styles */
         /**/
         
-        .pcss3-accordion-caption {
+        .caption-photo {
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            text-align: left;
-            opacity: 0;
+            background: rgba(150, 15, 17, 0.4);
+            text-align: center;
             transition: opacity 0.3s linear;
             -o-transition: opacity 0.3s linear;
             -ms-transition: opacity 0.3s linear;
             -moz-transition: opacity 0.3s linear;
             -webkit-transition: opacity 0.3s linear;
-            color: #fff;
+            color: #f9f2f2;
         }
-        
-        .pcss3-accordion-caption-right {
-            top: 0;
-            right: 0;
-            left: auto;
-            width: 40%;
-        }
-        
-        .pcss3-accordion-caption dl {
-            margin: 0;
-            padding: 20px;
-        }
-        
-        .pcss3-accordion-caption dt {
+
+        .caption-photo h1 {
             margin: 0 0 12px;
-            padding: 0;
+            padding: .5em 0;
             font: 400 24px/32px 'Questrial', Arial;
+            color:#f9f2f2;
+        }
+        .caption-photo h1:hover {
+            background-color: transparent ;
         }
         
-        .pcss3-accordion-caption dd {
+        .caption-photo p {
             margin: 0;
-            padding: 0;
-            font-size: 12px;
-            line-height: 16px;
+            padding: 1em .5em;
+            font-size: 16px;
+            line-height: 20px;
+        }
+        .caption-photo a {
+            color:#fff;
+            text-decoration:underline;
         }
         
-        .pcss3-accordion-input:checked ~ .pcss3-accordion-caption {
-            opacity: 1;
+        #photo .amp-carousel-button {
+            cursor:pointer;
+            background-color: rgba(110, 15, 17, .7);
+            -webkit-transition: background-color .3s, color .15s, box-shadow .3s, opacity 0.3s;
+            transition: background-color .3s, color .15s, box-shadow .3s, opacity 0.3s;
+            top: 90%;
         }
         
-        /* media queries for photos */
-        
-        @media screen and (max-width: 768px) {
-            .pcss3-accordion-caption dl {
-                padding: 15px;
-            }
-            .pcss3-accordion-caption dt {
-                font-size: 18px;
-                line-height: 26px;
-            }
-            .pcss3-accordion-caption dd {
-                font-size: 11px;
-                line-height: 15px;
-            }
-        }
-        
-        @media screen and (max-width: 480px) {
-            .pcss3-accordion-caption dl {
-                padding: 10px;
-            }
-            .pcss3-accordion-caption dt {
-                font-size: 16px;
-                line-height: 20px;
-            }
-            .pcss3-accordion-caption dd {
-                font-size: 10px;
-                line-height: 14px;
-            }
+        #photo .amp-carousel-button:hover {
+            -moz-box-shadow: 0 4px 8px 0 rgba(252,221,221, 0.2), 0 6px 20px 0 rgba(252,221,221, 0.19);
+            -webkit-box-shadow: 0 4px 8px 0 rgba(252,221,221, 0.2), 0 6px 20px 0 rgba(252,221,221, 0.19);
+            box-shadow: 0 4px 8px 0 rgba(252,221,221, 0.2), 0 6px 20px 0 rgba(252,221,221, 0.19);
         }
         
         /* media queries */
@@ -782,58 +690,56 @@
                 <h1 class="toggle1"></h1>
                 <div class="row">
                     <p style="text-align:center;">Samples from our photography portfolios.</p>
-                    <div class="pcss3-accordion pcss3-accordion4">
-                        <div class="pcss3-accordion-item">
-                            <input type="radio" name="pcss3-accordion" checked class="pcss3-accordion-input">
-                            <amp-img src="img/garda.jpg" alt="" class="pcss3-accordion-pic" noloading width=800 height=600 layout="responsive"></amp-img>
-                            <div class="pcss3-accordion-caption pcss3-accordion-caption-right">
-                                <dl>
-                                    <dt>Fotolia</dt>
-                                    <dd>Our most wanted online portfolio, great trendy pictures, <a target="_blank" href="http://it.fotolia.com/p/203022641">here the link</a>.</dd>
-                                </dl>
-                            </div>
-
-                            <div class="pcss3-accordion-item">
-                                <input type="radio" name="pcss3-accordion" class="pcss3-accordion-input">
-                                <amp-img src="img/formignano.jpg" alt="" class="pcss3-accordion-pic" noloading width=800 height=600 layout="responsive"></amp-img>
-                                <div class="pcss3-accordion-caption pcss3-accordion-caption-left">
-                                    <dl>
-                                        <dt>Photodune</dt>
-                                        <dd>The microstock for envato creative community ecosystem, <a target="_blank" href="http://photodune.net/user/jilt/portfolio"> we are there too!</a></dd>
-                                    </dl>
-                                </div>
-
-                                <div class="pcss3-accordion-item">
-                                    <input type="radio" name="pcss3-accordion" class="pcss3-accordion-input">
-                                    <amp-img src="img/mercury.jpg" alt="" class="pcss3-accordion-pic" width=800 height=600 layout="responsive" noloading ></amp-img>
-                                    <div class="pcss3-accordion-caption pcss3-accordion-caption-right">
-                                        <dl>
-                                            <dt>Dreamstime</dt>
-                                            <dd>The world famous microstock community, you can find our urbex works <a target="_blank" href="http://www.dreamstime.com/jeeltcraft_info">in there</a></dd>
-                                        </dl>
-                                    </div>
-
-                                    <div class="pcss3-accordion-item">
-                                        <input type="radio" name="pcss3-accordion" class="pcss3-accordion-input">
-                                        <amp-img src="img/poggioreale.jpg" alt="" class="pcss3-accordion-pic" width=800 height=600 layout="responsive" noloading>
-                                        <div class="pcss3-accordion-caption pcss3-accordion-caption-right">
-                                            <dl>
-                                                <dt>Usplash</dt>
-                                                <dd>Worldwide photo community, "Do Whatever You Want" license, take a look at our <a target="_blank" href="https://unsplash.com/@jilt">profile</a></dd>
-                                            </dl>
-                                        </div>
-                                    </div>
-                                    <!--/ item4 -->
-
-                                </div>
-                                <!--/ item3 -->
-
-                            </div>
-                            <!--/ item2 -->
-
-                        </div>
-                        <!--/ item1 -->
-                    </div>
+                    <amp-carousel id="photo" width=400 height=300 layout=responsive type=slides controls autoplay delay="8000">
+        <div class="inner-slide">
+            <div class="carousel-photo">
+                <amp-img src="img/garda.jpg" noloading layout=fill>
+                </amp-img>
+            </div>
+            <div class="caption-photo" layout="responsive">
+                <h1>Fotolia</h1>
+                <p style="text-align:center;">
+                    Our most wanted online portfolio, great trendy pictures, <a target="_blank" href="http://it.fotolia.com/p/203022641">here the link</a>.
+                </p>
+            </div>
+        </div>
+        <div class="inner-slide">
+            <div class="carousel-photo">
+                <amp-img src="img/formignano.jpg" noloading layout=fill>
+                </amp-img>
+            </div>
+            <div class="caption-photo" layout="responsive">
+                <h1>Photodune</h1>
+                <p style="text-align:center;">
+                    Envato creative community ecosystem, <a target="_blank" href="http://photodune.net/user/jilt/portfolio"> we are there too</a>!
+                </p>
+            </div>
+        </div>
+        <div class="inner-slide">
+            <div class="carousel-photo">
+                <amp-img src="img/mercury.jpg" noloading layout=fill>
+                </amp-img>
+            </div>
+            <div class="caption-photo" layout="responsive">
+                <h1>Dreamstime</h1>
+                <p style="text-align:center;">
+                    World famous community, you can find our urbex works <a target="_blank" href="http://www.dreamstime.com/jeeltcraft_info">in there</a>
+                </p>
+            </div>
+        </div>
+        <div class="inner-slide">
+            <div class="carousel-photo">
+                <amp-img src="img/poggioreale.jpg" noloading layout=fill>
+                </amp-img>
+            </div>
+            <div class="caption-photo" layout="responsive">
+                <h1>Unsplash</h1>
+                <p style="text-align:center;">
+                    Online photo folks, "Do Whatever You Want" license, our <a target="_blank" href="https://unsplash.com/@jilt">profile</a>
+                </p>
+            </div>
+        </div>
+    </amp-carousel>
                 </div>
             </section>
         </amp-accordion>
@@ -866,24 +772,27 @@
     </footer>
     <amp-analytics type="googleanalytics" id="analytics2">
         <script type="application/json">
-            <script type="application/json">
-            { "vars": { 
-                "account": "UA-78444129-1" 
-            }, 
-                "triggers": { 
-                    "trackPageview": { 
+            {
+                "vars": {
+                    "account": "UA-78444129-1"
+                },
+                "triggers": {
+                    "trackPageview": {
                         "on": "visible",
-                        "request": "pageview" 
+                        "request": "pageview"
+                    }
+        
                 },
                 "trackAnchorClicks": {
                     "on": "click",
                     "selector": "a",
                     "request": "event",
                     "vars": {
-                    "eventId": "home-page-link",
-                    "eventLabel": "clicked on a home link"
-                } } }
-        </script>
+                        "eventId": "home-page-link",
+                        "eventLabel": "clicked on a home link"
+                    }
+                }
+            }
         </script>
     </amp-analytics>
 </body>
