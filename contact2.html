@@ -412,31 +412,27 @@
       width: 90%;
       margin: 0 auto;
     }
-    
-    .group,
-    .group-message {
-      position: relative;
-      margin-top: 1em;
-      margin-bottom: 45px;
-    }
-    
-    .group-message {
-      width: 98%;
-      margin: 0 auto;
-      background: transparent;
-    }
-    
+
     input,
     textarea {
       font-size: 18px;
       font-family: 'Questrial', Arial;
       padding: 10px 10px 10px 5px;
-      display: block;
-      width: 100%;
       border: none;
+      width:99%;
+      display:block;
       border-bottom: 1px solid #c93937;
       background: transparent;
       color: #f9f2f2;
+    }
+    
+    textarea{
+      padding-top:50px;
+    }
+    
+        input:focus,
+    textarea:focus {
+      outline: none;
     }
     
     .submit-input {
@@ -451,16 +447,7 @@
       width:10%;
     }
     
-    .group-message textarea {
-      height: 200px;
-      padding: 20px 10px;
-      line-height: 24px;
-    }
-    
-    input:focus,
-    textarea:focus {
-      outline: none;
-    }
+  
     /* LABEL ======================================= */
     
     label {
@@ -469,59 +456,93 @@
       font-weight: normal;
       position: absolute;
       pointer-events: none;
-      left: 15px;
+      left: 65px;
       top: 30px;
       transition: 0.2s ease all;
       -moz-transition: 0.2s ease all;
       -webkit-transition: 0.2s ease all;
     }
     
-    .dt-message {
-      top: 180px;
+    .label-1 {
+      top: 170px;
     }
-    /* active state */
     
-    input:focus ~ label,
-    input:valid ~ label,
-    textarea:focus ~ label {
-      top: -5px;
-      font-size: 14px;
+    .label-2 {
+      top: 210px;
+    }
+    
+    .label-3 {
+      top: 460px;
+    }
+    
+      /* active state */
+    
+    .input-1:focus ~ .label-1,
+    .input-1:valid ~ .label-1 {
+      top: 160px;
+      font-size: 16px;
       color: #c93937;
     }
-    /* BOTTOM BARS ================================= */
-    
-    .bbar {
-      position: relative;
-      display: block;
-      width: 100%;
+    .input-2:focus ~ .label-2,
+    .input-2:valid ~ .label-2 {
+      top: 200px;
+      font-size: 16px;
+      color: #c93937;
     }
     
-    .bbar:before,
-    .bbar:after {
+    textarea:focus ~ .label-3 {
+    	top: 260px;
+      	font-size: 16px;
+      	color: #c93937;
+    }
+    
+    /* BOTTOM BARS ================================= */
+    
+    .bbar-1,
+    .bbar-2,
+    .bbar-3 {
+      position: relative;
+      display: block;
+      width:100%;
+    }
+    
+    .bbar-1:before,
+    .bbar-1:after,
+    .bbar-2:before,
+    .bbar-2:after,
+    .bbar-3:before,
+    .bbar-3:after {
       content: '';
       height: 2px;
       width: 0;
       bottom: 1px;
       position: absolute;
-      background: #f9f2f2;
+      background: #cc3333;
       transition: 0.2s ease all;
       -moz-transition: 0.2s ease all;
       -webkit-transition: 0.2s ease all;
     }
     
-    .bbar:before {
+    .bbar-1:before,
+    .bbar-2:before,
+    .bbar-3:before{
       left: 50%;
     }
     
-    .bbar:after {
+    .bbar-1:after,
+    .bbar-2:after,
+    .bbar-3:after{
       right: 50%;
     }
+    
     /* active state */
     
-    input:focus ~ .bbar:before,
-    textarea:focus ~ .bbar:before,
-    input:focus ~ .bbar:after,
-    textarea:focus ~ .bbar:after {
+    .input-1:focus ~ .bbar-1:before,
+    .input-2:focus ~ .bbar-2:before,
+    textarea:focus ~ .bbar-3:before,
+    .input-1:focus ~ .bbar-1:after,
+    .input-2:focus ~ .bbar-2:after,
+    textarea:focus ~ .bbar-3:after {
       width: 50%;
     }
     /* media queries */
@@ -667,35 +688,19 @@
   <amp-lightbox id="libero-contacts" layout="nodisplay">
     <div class="lightbox">
       <h1>Send a Message to Libero</h1>
-      <form layout="fill" action="https://formspree.io/libmisty@demetratech.eu" method="POST">
-        <div class="row">
-          <div class="group col-6">
-            <input type="text" name="dt_name" required>
-            <span class="bbar"></span>
-            <label for="dt-name">Name</label>
-          </div>
-          <div class="group col-6">
-            <input type="email" name="_replyto" required>
-            <span class="bbar"></span>
-            <label for="_replyto">Email</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="group-message">
-            <textarea type="text" name="dt-message" maxlength="10000" rows="20" layout="fill" required></textarea>
-            <span class="bbar"></span>
-            <label class="dt-message" for="dt-message">Message</label>
-          </div>
-        </div>
-        <br />
-        <input class="submit-input" href="" type="submit" value="Send" id="submit-libero">
-        <span style="clear:both;"></span>
-        <input type="hidden" name="_next" value="http://www.demetratech.com" target="_blank"/>
-        <br />
-        <br />
-        <br />
-        <br />
-      </form>
+      <form action="https://formspree.io/libmisty@demetratech.eu"  method="POST">
+    						<input type="text" name="name" class="input-1" required>
+    						<span class="bbar-1"></span>
+    						<label for="name" class="label-1">Name</label>
+    						<input type="email" name="_replyto" class="input-2" required>
+    						<span class="bbar-2"></span>
+    						<label for="email" class="label-2">Email</label>
+    						<textarea type="text" name="message" maxlength="10000" rows="10" required></textarea>
+    						<span class="bbar-3"></span>
+    						<label for="message" class="label-3">Message</label>
+    						<input type="submit" value="Send"class="submit-input">
+    						<br /><br /><br />
+					</form>
       <div class="row" style="text-align:center;">
         <a class="close" on="tap:libero-contacts.close" role="button" tabindex="0">X</a>
       </div>
@@ -704,35 +709,19 @@
   <amp-lightbox id="laura-contacts" layout="nodisplay">
     <div class="lightbox">
       <h1>Send a Message to Laura</h1>
-      <form layout="fill" action="https://formspree.io/jeeltcraft@demetratech.eu" method="POST">
-        <div class="row">
-          <div class="group col-6">
-            <input type="text" name="dt_name" required>
-            <span class="bbar"></span>
-            <label for="dt-name">Name</label>
-          </div>
-          <div class="group col-6">
-            <input type="email" name="_replyto" required>
-            <span class="bbar"></span>
-            <label for="_replyto">Email</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="group-message">
-            <textarea type="text" maxlength="10000" rows="20" layout="fill" required></textarea>
-            <span class="bbar"></span>
-            <label class="dt-message">Message</label>
-          </div>
-        </div>
-        <br />
-        <input class="submit-input" href="" type="submit" value="Send" id="submit-laura">
-        <span style="clear:both;"></span>
-        <input type="hidden" name="_next" value="/contact2.html"/>
-        <br />
-        <br />
-        <br />
-        <br />
-      </form>
+      <form action="https://formspree.io/jeeltcraft@demetratech.eu"  method="POST">
+    						<input type="text" name="name" class="input-1" required>
+    						<span class="bbar-1"></span>
+    						<label for="name" class="label-1">Name</label>
+    						<input type="email" name="_replyto" class="input-2" required>
+    						<span class="bbar-2"></span>
+    						<label for="email" class="label-2">Email</label>
+    						<textarea type="text" name="message" maxlength="10000" rows="10" required></textarea>
+    						<span class="bbar-3"></span>
+    						<label for="message" class="label-3">Message</label>
+    						<input type="submit" value="Send"class="submit-input">
+    						<br /><br /><br />
+					</form>
       <div class="row" style="text-align:center;">
         <a class="close" on="tap:laura-contacts.close" role="button" tabindex="1">X</a>
       </div>
