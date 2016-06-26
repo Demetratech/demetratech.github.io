@@ -1,39 +1,799 @@
 <!doctype html>
 <html amp lang="en" itemscope itemtype="http://schema.org/WebSite">
-  <head>
-    <meta charset="utf-8">
-    <title>Demetratech</title>
-    <link rel="canonical" href="http://demetratech.github.io/index.html" />
-    <link rel='shortcut icon' type='image/x-icon' href='http://demetratech.github.io/favicon.ico' />
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "WebSite",
-    "headline": "Demetratech web services",
-    "datePublished": "2016-04-05T08:00:00+08:00",
-    "dateModified": "2016-04-05T09:20:00+08:00",
-    "author": {
-      "@type": "Person",
-      "name": "Laura Camellini"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Demetratech",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://demetratech.github.io/logo.png",
-        "width": 200,
-        "height": 60
-      }
-    },
-    "description": "Demetratech, web for the wintage world"
-  }
+
+<head>
+  <meta charset="utf-8">
+  <link rel="canonical" href="http://demetratech.github.io/index.html" />
+  <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
+  <title>Demetratech - Web for the vintage world</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+  <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+  <script type="application/ld+json">
+    { "@context": "http://schema.org", "@type": "WebSite", "headline": "Demetratech web services", "datePublished": "2016-04-05T08:00:00+08:00", "dateModified": "2016-04-05T09:20:00+08:00", "author": { "@type": "Person", "name": "Laura Camellini" }, "publisher":
+    { "@type": "Organization", "name": "Demetratech", "logo": { "@type": "ImageObject", "url": "https://demetratech.github.io/logo.png", "width": 200, "height": 60 } }, "description": "Demetratech, web for the wintage world" }
   </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <amp-img src="splash.svg" alt="Welcome" height="560" width="960"></amp-img>
-  </body>
+  <style amp-boilerplate>
+    body {
+      -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      animation: -amp-start 8s steps(1, end) 0s 1 normal both
+    }
+    
+    @-webkit-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+      to {
+        visibility: visible
+      }
+    }
+    
+    @-moz-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+      to {
+        visibility: visible
+      }
+    }
+    
+    @-ms-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+      to {
+        visibility: visible
+      }
+    }
+    
+    @-o-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+      to {
+        visibility: visible
+      }
+    }
+    
+    @keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+      to {
+        visibility: visible
+      }
+    }
+  </style>
+  <noscript>
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: none;
+        -moz-animation: none;
+        -ms-animation: none;
+        animation: none
+      }
+    </style>
+  </noscript>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <style>
+    /* responsive utilities */
+          
+        body,
+        header,
+        section,
+        div,
+        a,
+        span,
+        p,
+        h1,
+        footer,
+        amp-img
+        {
+            box-sizing: border-box;
+        }
+    
+    .row {
+      width: 100%;
+    }
+    
+    .row::after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+    
+    [class*="col-"] {
+      float: left;
+      padding: 15px;
+    }
+    
+    /* loader */
+    
+    .wait {
+      position: absolute;
+      z-index: 3;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    
+    .bar {
+      float: left;
+      width: 100%;
+      height: 3px;
+      background-color: #f9f2f2;
+    }
+    
+    .wait .bar {
+      animation: loadingJ 2s cubic-bezier(.17, .37, .43, .67) infinite;
+    }
+    
+    @-webkit-keyframes loadingJ {
+      0%, 100% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(80px, 0);
+        background-color: #c93937;
+        width: 25%;
+      }
+    }
+    
+    @-moz-keyframes loadingJ {
+      0%, 100% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(80px, 0);
+        background-color: #c93937;
+        width: 25%;
+      }
+    }
+    
+    @-ms-keyframes loadingJ {
+      0%, 100% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(80px, 0);
+        background-color: #c93937;
+        width: 25%;
+      }
+    }
+    
+    @-o-keyframes loadingJ {
+      0%, 100% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(80px, 0);
+        background-color: #c93937;
+        width: 25%;
+      }
+    }
+    
+    @keyframes loadingJ {
+      0%, 100% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(80px, 0);
+        background-color: #c93937;
+        width: 25%;
+      }
+    }
+    /* basic styles */
+    
+    html,
+    body {
+      overflow: hidden;
+    }
+    
+    body {
+      font-family: 'Questrial', Arial;
+      font-size: 16px;
+      color: #c93937;
+    }
+    
+    .color {
+      color: #700f11;
+    }
+    
+    body,
+    viewer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
+    
+    viewer {
+      background: #fff;
+    }
+    
+    #visibilityToggle {
+      display: none;
+    }
+    
+    header {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background-color: rgba(250, 220, 220, .7);
+      color: #c73838;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0 8px;
+      box-shadow: rgba(150, 15, 17, 0.15) 1px 1px 14px;
+    }
+    
+    .menu-right a:hover {
+      color: #700f11;
+    }
+    
+    header h1 {
+      font-size: 22px;
+      flex-grow: 1;
+    }
+    
+    header .show-container-anchor {
+      flex-grow: 0;
+      flex-shrink: 0;
+      padding: 8px;
+      padding-bottom: 1.3em;
+      cursor: pointer;
+    }
+    
+    header #visibilityToggle {
+      flex-grow: 0;
+      flex-shrink: 0;
+      padding: 8px;
+    }
+    
+    container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow-x: hidden;
+      visibility: hidden;
+    }
+    
+    viewer[data-show-container="1"] #container1 {
+      visibility: visible;
+    }
+    
+    viewer[data-show-container="1"] #show-container1-anchor {
+      border-bottom: 2px solid #c73838;
+    }
+    
+    viewer[data-show-container="2"] #container2 {
+      visibility: visible;
+    }
+    
+    viewer[data-show-container="2"] #show-container2-anchor {
+      border-bottom: 2px solid #c73838;
+    }
+    
+    viewer[data-show-container="3"] #container3 {
+      visibility: visible;
+    }
+    
+    viewer[data-show-container="3"] #show-container3-anchor {
+      border-bottom: 2px solid #c73838;
+    }
+    
+    viewer.natural container {
+      overflow-y: hidden;
+    }
+    
+    viewer.virtual container {
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    container iframe {
+      border: 0;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+    
+    viewer.natural container iframe {
+      height: 100%;
+    }
+    /*media queries */
+    
+    @media screen and (min-width: 769px) {
+      header {
+        height: 60px;
+      }
+      .menu-right {
+        padding-top: 2.3em;
+      }
+      .col-1 {
+        width: 8.33%;
+      }
+      .col-2 {
+        width: 16.66%;
+      }
+      .col-3 {
+        width: 25%;
+      }
+      .col-4 {
+        width: 33.33%;
+      }
+      .col-5 {
+        width: 41.66%;
+      }
+      .col-6 {
+        width: 50%;
+      }
+      .col-7 {
+        width: 58.33%;
+      }
+      .col-8 {
+        width: 66.66%;
+      }
+      .col-9 {
+        width: 75%;
+      }
+      .col-10 {
+        width: 83.33%;
+      }
+      .col-11 {
+        width: 91.66%;
+      }
+      .col-12 {
+        width: 100%;
+      }
+    }
+    
+    @media screen and (max-width: 768px) {
+      [class*="col-"] {
+        width: 100%;
+      }
+      header {
+        height: 9.4em;
+        background-color: rgba(250, 220, 220, 1);
+      }
+      header .row {
+        text-align: center;
+      }
+      viewer[data-show-container="2"] #container2 {
+        visibility: visible;
+        margin-top: 9.4em;
+      }
+      viewer[data-show-container="3"] #container3 {
+        visibility: visible;
+        margin-top: 9.4em;
+      }
+      .wait {
+        top: 150px;
+        left: 0;
+      }
+    }
+  </style>
+
+  <script src="./viewer-integr-messaging.js"></script>
+
+  <script>
+    var SENTINEL = '__AMP__';
+    var allViewers = [];
+
+    function Viewer(containerId, id, url, visible) {
+      this.id = id;
+      this.url = url;
+      this.alreadyLoaded_ = false;
+      this.stackIndex_ = 0;
+      this.viewportType_ = 'natural'; // "natural" or "virtual"
+      this.visibilityState_ = visible ? 'visible' : 'hidden';
+      this.prerenderSize_ = 1;
+      this.isIos_ = /iPhone|iPad|iPod/i.test(window.navigator.userAgent);
+      this.viewer = document.querySelector('viewer');
+      this.header = document.querySelector('header');
+      this.container = document.getElementById(containerId);
+      this.iframe = document.createElement('iframe');
+      this.iframe.setAttribute('id', 'AMP_DOC_' + this.id);
+      // TODO(dvoytenko): Set to the final value when crbug/577330 is fixed:
+      // this.iframe.setAttribute('sandbox',
+      //     'allow-popups allow-scripts allow-forms allow-pointer-lock' +
+      //     ' allow-popups-to-escape-sandbox allow-same-origin');
+      this.visibilityToggle_ = document.getElementById('visibilityToggle');
+      this.visibilityToggle_.onclick = function() {
+        this.toggleVisibility(this.visibilityState_ != 'visible');
+      }.bind(this);
+      if (visible) {
+        this.updateVisibilityToggle_();
+      }
+      this.viewer.classList.add(this.viewportType_);
+      if (this.viewportType_ == 'natural' && !this.isIos_) {
+        this.iframe.setAttribute('scrolling', 'yes');
+      }
+      else {
+        this.iframe.setAttribute('scrolling', 'no');
+      }
+      if (this.viewportType_ == 'virtual') {
+        this.container.addEventListener('scroll', this.onScroll_.bind(this));
+      }
+      window.addEventListener('resize', this.onResize_.bind(this));
+      window.addEventListener('popstate', this.onPopState_.bind(this));
+    };
+    Viewer.prototype.start = function() {
+      allViewers.push(this);
+      var params = {
+        history: 1,
+        viewportType: this.viewportType_,
+        width: this.container. /*OK*/ offsetWidth,
+        height: this.container. /*OK*/ offsetHeight,
+        paddingTop: this.header. /*OK*/ offsetHeight,
+        visibilityState: this.visibilityState_,
+        prerenderSize: this.prerenderSize_,
+        viewerorigin: parseUrl(window.location.href).origin,
+        csi: 0
+      };
+      log('Params:' + JSON.stringify(params));
+      var inputUrl = this.url + '#' + paramsStr(params);
+      if (window.location.hash && window.location.hash.length > 1) {
+        inputUrl += '&' + window.location.hash.substring(1);
+      }
+      var parsedUrl = parseUrl(inputUrl);
+      var url = parsedUrl.href;
+      this.frameOrigin_ = parsedUrl.origin;
+      log('AMP URL = ', url);
+      this.iframe.style.display = 'none';
+      this.container.appendChild(this.iframe);
+      // Notice that name can only be set once the IFrame is in the DOM.
+      this.iframe.contentWindow.name = SENTINEL + paramsStr(params);
+      this.awaitHandshake_();
+      this.iframe.onload = this.loaded_.bind(this);
+      setTimeout(function() {
+        this.iframe.style.visibility = 'hidden';
+        if (this.viewportType_ == 'virtual') {
+          this.iframe.style.height = this.container. /*OK*/ offsetHeight + 'px';
+        }
+        this.iframe.style.display = '';
+        this.iframe.setAttribute('src', url);
+      }.bind(this));
+    };
+    Viewer.prototype.awaitHandshake_ = function() {
+      var targetId = this.iframe.id;
+      var target = this.iframe.contentWindow;
+      var targetOrigin = this.frameOrigin_;
+      var listener = function(event) {
+        if (event.origin == targetOrigin &&
+          event.data == 'amp-handshake-request' &&
+          (!event.source || event.source == target)) {
+          log('Viewer ' + this.id + ' messaging established with ',
+            targetOrigin);
+          window.removeEventListener('message', listener, false);
+          target. /*OK*/ postMessage('amp-handshake-response', targetOrigin);
+          this.messaging_ = new ViewerMessaging(target, targetOrigin,
+            this.processRequest_.bind(this), targetId);
+          this.sendRequest_('visibilitychange', {
+            state: this.visibilityState_,
+            prerenderSize: this.prerenderSize
+          }, true);
+        }
+      }.bind(this);
+      window.addEventListener('message', listener, false);
+    };
+    Viewer.prototype.toggleVisibility = function(visible) {
+      log('Viewer ' + this.id + ' visibility -> ', visible);
+      this.visibilityState_ = visible ? 'visible' : 'hidden';
+      this.sendRequest_('visibilitychange', {
+        state: this.visibilityState_,
+        prerenderSize: this.prerenderSize
+      }, true);
+      if (visible) {
+        this.updateVisibilityToggle_();
+      }
+    };
+    Viewer.prototype.loaded_ = function() {
+      if (this.alreadyLoaded_) {
+        return;
+      }
+      log('AMP Loaded');
+      this.alreadyLoaded_ = true;
+      var waiter = this.container.querySelector('.wait');
+      if (waiter) {
+        waiter.parentElement.removeChild(waiter);
+      }
+      this.iframe.style.display = '';
+      this.iframe.style.visibility = '';
+      this.iframe.contentWindow.onbeforeunload = (function() {
+        this.container.style.paddingTop = '200px';
+        this.container.style.paddingLeft = '50px';
+        this.container.textContent =
+          'LOADING...          please refresh the page after 4 seconds';
+      }).bind(this);
+    };
+    Viewer.prototype.documentReady_ = function() {
+      log('AMP document ready');
+      this.loaded_();
+      return Promise.resolve();
+    };
+    Viewer.prototype.documentHeight_ = function(documentHeight) {
+      log('AMP document height:', documentHeight);
+      if (this.viewportType_ == 'virtual') {
+        this.iframe.style.height = Math.max(documentHeight,
+          this.container. /*OK*/ offsetHeight) + 'px';
+      }
+      return Promise.resolve();
+    };
+    Viewer.prototype.onScroll_ = function() {
+      this.sendRequest_('viewport', {
+        scrollTop: this.container. /*OK*/ scrollTop
+      }, false);
+    };
+    Viewer.prototype.onResize_ = function() {
+      log('Resized to ', this.container. /*OK*/ offsetWidth,
+        this.container. /*OK*/ offsetHeight,
+        this.header. /*OK*/ offsetHeight,
+        this.container. /*OK*/ scrollTop);
+      this.sendRequest_('viewport', {
+        scrollTop: this.container. /*OK*/ scrollTop,
+        width: this.container. /*OK*/ offsetWidth,
+        height: this.container. /*OK*/ offsetHeight,
+        paddingTop: this.header. /*OK*/ offsetHeight
+      }, false);
+    };
+    Viewer.prototype.requestFullOverlay_ = function() {
+      log('requestFullOverlay');
+      this.header.style.opacity = 0;
+      return Promise.resolve();
+    };
+    Viewer.prototype.cancelFullOverlay_ = function() {
+      log('cancelFullOverlay');
+      this.header.style.opacity = 1;
+      return Promise.resolve();
+    };
+    Viewer.prototype.pushHistory_ = function(stackIndex) {
+      log('push history to ', stackIndex);
+      // Super trivial. Only one step allowed.
+      if (stackIndex != this.stackIndex_ + 1) {
+        throw new Error('Only one step push allowed');
+      }
+      this.stackIndex_ = stackIndex;
+      window.history.pushState({}, '');
+      return Promise.resolve();
+    };
+    Viewer.prototype.popHistory_ = function(stackIndex) {
+      log('pop history at ', stackIndex);
+      // Super trivial. Only one step allowed.
+      if (stackIndex != this.stackIndex_) {
+        throw new Error('Only one step pop allowed');
+      }
+      this.stackIndex_ = stackIndex;
+      window.history.go(-1);
+      return Promise.resolve();
+    };
+    Viewer.prototype.onPopState_ = function() {
+      // Even more trivial. Always assumes that only one step was popped in
+      // history.
+      this.stackIndex_--;
+      this.sendRequest_('historyPopped', {
+        newStackIndex: this.stackIndex_
+      }, false);
+      log('history popped to ', this.stackIndex_);
+    };
+    Viewer.prototype.updateVisibilityToggle_ = function() {
+      this.visibilityToggle_.textContent = this.visibilityState_ == 'visible' ?
+        'Visible' : 'Prerendering';
+    };
+    Viewer.prototype.broadcast_ = function(message) {
+      log('broadcast: ', message);
+      var self = this;
+      allViewers.forEach(function(viewer) {
+        if (viewer != self) {
+          viewer.messaging_.sendRequest('broadcast', message, false);
+        }
+      });
+    };
+    Viewer.prototype.processRequest_ = function(type, data, awaitResponse) {
+      if (type == 'documentLoaded') {
+        return this.documentReady_();
+      }
+      if (type == 'documentResized') {
+        return this.documentHeight_(data.height);
+      }
+      if (type == 'requestFullOverlay') {
+        return this.requestFullOverlay_();
+      }
+      if (type == 'cancelFullOverlay') {
+        return this.cancelFullOverlay_();
+      }
+      if (type == 'pushHistory') {
+        return this.pushHistory_(data.stackIndex);
+      }
+      if (type == 'popHistory') {
+        return this.popHistory_(data.stackIndex);
+      }
+      if (type == 'broadcast') {
+        return this.broadcast_(data);
+      }
+      if (type == 'setFlushParams') {
+        return;
+      }
+      return Promise.reject('request not supported: ' + type);
+    };
+    Viewer.prototype.sendRequest_ = function(type, data, awaitResponse) {
+      if (!this.messaging_) {
+        return;
+      }
+      return this.messaging_.sendRequest(type, data, awaitResponse);
+    };
+
+    function log() {
+      var var_args = Array.prototype.slice.call(arguments, 0);
+      var_args.unshift('[VIEWER]');
+      console /*OK*/ .log.apply(console, var_args);
+    }
+
+    function parseUrl(urlString) {
+      var a = document.createElement('a');
+      a.href = urlString;
+      return {
+        href: a.href,
+        protocol: a.protocol,
+        host: a.host,
+        hostname: a.hostname,
+        port: a.port == '0' ? '' : a.port,
+        pathname: a.pathname,
+        search: a.search,
+        hash: a.hash,
+        origin: a.protocol + '//' + a.host
+      };
+    }
+
+    function paramsStr(params) {
+      var s = '';
+      for (var k in params) {
+        var v = params[k];
+        if (v === null || v === undefined) {
+          continue;
+        }
+        if (s.length > 0) {
+          s += '&';
+        }
+        s += encodeURIComponent(k) + '=' + encodeURIComponent(v);
+      }
+      return s;
+    }
+
+    function loadAmpDoc() {
+      new Viewer(
+        'container1',
+        '1',
+        './carousel.html',
+        true).start();
+      addShowContainer('1');
+      new Viewer(
+        'container2',
+        '2',
+        './projects.html',
+        false).start();
+      addShowContainer('2');
+      new Viewer(
+        'container3',
+        '3',
+        './contact2.html',
+        false).start();
+      addShowContainer('3');
+      showContainer('1');
+    }
+
+    function addShowContainer(id) {
+      var anchor = document.getElementById('show-container' + id + '-anchor');
+      anchor.onclick = function() {
+        showContainer(id);
+      };
+    }
+
+    function showContainer(id) {
+      log('Show container: ', id);
+      var viewerEl = document.querySelector('viewer');
+      viewerEl.setAttribute('data-show-container', id);
+      allViewers.forEach(function(viewer) {
+        viewer.toggleVisibility(viewer.id == id);
+      });
+    }
+    window.onload = loadAmpDoc;
+  </script>
+</head>
+
+<body>
+  <viewer>
+    <header layout="container">
+      <div class="row">
+        <div class="col-6">
+          <amp-img src="logo.png" width="200" height="56" noloading></amp-img>
+        </div>
+        <div class="menu-right col-6" layout="responsive" style="text-align:center;">
+          <a class="show-container-anchor" id="show-container1-anchor">Home</a>
+          <a class="show-container-anchor" id="show-container2-anchor">Projects</a>
+          <a class="show-container-anchor" id="show-container3-anchor">Contact</a>
+          <a id="visibilityToggle">Visible</a>
+        </div>
+      </div>
+    </header>
+    <container id="container1">
+      <div class="wait">
+        <div class="bar"></div>
+      </div>
+    </container>
+    <container id="container2">
+      <div class="wait">
+        <div class="bar"></div>
+      </div>
+    </container>
+    <container id="container3">
+      <div class="wait">
+        <div class="bar"></div>
+      </div>
+    </container>
+  </viewer>
+  <amp-analytics type="googleanalytics" id="analytics1">
+<script type="application/json">
+  {
+    "vars": {
+      "account": "UA-78444129-1"
+    },
+    "triggers": {
+      "trackPageview": {
+        "on": "visible",
+        "request": "pageview"
+      },
+      "trackEvent": {
+        "selector": "#show-container1-anchor",
+        "on": "click",
+        "request": "event",
+        "vars": {
+          "eventCategory": "ui-components",
+          "eventAction": "click"
+        }
+
+      },
+      "trackEvent": {
+        "selector": "#show-container2-anchor",
+        "on": "click",
+        "request": "event",
+        "vars": {
+          "eventCategory": "ui-components",
+          "eventAction": "click"
+        },
+      },
+      "trackEvent": {
+        "selector": "#show-container3-anchor",
+        "on": "click",
+        "request": "event",
+        "vars": {
+          "eventCategory": "ui-components",
+          "eventAction": "header-click"
+        }
+      }
+    }
+  }
+</script>
+  </amp-analytics>
+</body>
+
 </html>
