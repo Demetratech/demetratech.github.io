@@ -557,6 +557,10 @@
     }
     
     @media screen and (max-width:1025px) {
+      
+      body{
+        margin-top:60px!important;
+      }
       footer {
         background-image: none;
         background-color: #c93937;
@@ -580,6 +584,14 @@
     }
     
     @media screen and (max-width: 768px) {
+      html{
+        padding-top:0!important;
+      }
+      
+      body {
+        margin-top:0!important;
+      }
+
       .col-6 {
         width: 100%;
       }
@@ -589,18 +601,18 @@
       .team-1 {
         position: absolute;
         left: 0%;
-        top: 70%;
+        top: 35%;
       }
       .team-2 {
         position: absolute;
         right: 0%;
-        top: 165%;
+        top: 85%;
       }
       footer > .row >.col-6 > .col-6:first-child {
         border-right: 1px solid #fff;
       }
       footer {
-        top: 210%;
+        top: 130%;
         bottom: auto;
       }
       .footer-tablet {
@@ -615,30 +627,74 @@
         font-size: 22px;
         line-height: 24px;
       }
-      .group,
-      .group-message {
-        margin: 0;
+      .input-2 {
+        margin-top:1em;
       }
-      .gourp-message {
-        padding-bottom:1em;
+      
+      .label-1 {
+        top:145px;
       }
-      .group-message textarea {
-        height: 100px;
-        padding: 20px 10px;
-        line-height: 24px;
+      .label-2 {
+        top:205px;
       }
-      .dt-message {
-        top: 70px;
+      .label-3 {
+        top:455px;
       }
+     
+       /* active state */
+    
+    .input-1:focus ~ .label-1,
+    .input-1:valid ~ .label-1 {
+      top: 125px;
+      font-size: 16px;
+      color: #c93937;
+    }
+    .input-2:focus ~ .label-2,
+    .input-2:valid ~ .label-2 {
+      top: 185px;
+      font-size: 16px;
+      color: #c93937;
+    }
+    
+    textarea:focus ~ .label-3 {
+    	top: 255px;
+      	font-size: 16px;
+      	color: #c93937;
+    }
+    
+    .submit-input {
+      width:25%;
+    }
+     
       .close {
         top:2px;
         right:2px;
       }
     }
+    
+    @media screen and (max-width: 480px) {
+      
+      input, textarea {
+        width:96%;
+      }
+      .team-1 {
+        position: absolute;
+        left: 0%;
+        top: 60%;
+      }
+      .team-2 {
+        position: absolute;
+        right: 0%;
+        top: 150%;
+      }
+      footer{
+        top:190%;
+      }
+    }
   </style>
 </head>
 
-<body>
+<body layout="container">
   <h1>Team</h1>
   <div class="row" layout="container">
     <div class="col-6 team-1">
@@ -660,8 +716,6 @@
       </div>
     </div>
   </div>
-  <br />
-  <br />
   <footer>
     <div class="row">
       <div class="col-6">
