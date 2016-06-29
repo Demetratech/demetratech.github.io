@@ -1,102 +1,34 @@
-<!doctype html>
-<html amp lang="en" itemscope itemtype="http://schema.org/ContactPage">
 
-<head>
-  <meta charset="utf-8">
-  <title>Demetratech</title>
-  <link rel="canonical" href="http://demetratech.github.io/contact2.html" />
-  <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
-  <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
-  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-  <script async src="https://cdn.ampproject.org/v0.js"></script>
-  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-  <script type="application/ld+json">
-    { "@context": "http://schema.org", "@type": "ContactPage", "headline": "Demetratech web services", "datePublished": "2016-04-05T08:00:00+08:00", "dateModified": "2016-04-05T09:20:00+08:00", "author": { "@type": "Person", "name": "Laura Camellini" }, "publisher":
-    { "@type": "Organization", "name": "Demetratech", "logo": { "@type": "ImageObject", "url": "https://demetratech.github.io/logo.png", "width": 200, "height": 60 } }, "description": "Demetratech, Team and contacts" }
-  </script>
-  <style amp-boilerplate>
-    body {
-      -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-      -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-      -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-      animation: -amp-start 8s steps(1, end) 0s 1 normal both
-    }
-    
-    @-webkit-keyframes -amp-start {
-      from {
-        visibility: hidden
-      }
-      to {
-        visibility: visible
-      }
-    }
-    
-    @-moz-keyframes -amp-start {
-      from {
-        visibility: hidden
-      }
-      to {
-        visibility: visible
-      }
-    }
-    
-    @-ms-keyframes -amp-start {
-      from {
-        visibility: hidden
-      }
-      to {
-        visibility: visible
-      }
-    }
-    
-    @-o-keyframes -amp-start {
-      from {
-        visibility: hidden
-      }
-      to {
-        visibility: visible
-      }
-    }
-    
-    @keyframes -amp-start {
-      from {
-        visibility: hidden
-      }
-      to {
-        visibility: visible
-      }
-    }
-  </style>
-  <noscript>
-    <style amp-boilerplate>
-      body {
-        -webkit-animation: none;
-        -moz-animation: none;
-        -ms-animation: none;
-        animation: none
-      }
-    </style>
-  </noscript>
-  <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
-  <style>
-  
-    /* responsive utilities */
-    
-         
-        body,
-        header,
-        section,
-        div,
-        a,
-        span,
-        p,
-        h1,
-        footer,
-        amp-img
-        {
-            box-sizing: border-box;
-        }
-    
+
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
+body {
+	color: #c93937;
+	font-weight: 400;
+	font-size: 1em;
+	font-family: 'Questrial', Arial, sans-serif;
+	overflow-x: hidden;
+}
+
+a {
+	color: #700f11;
+	text-decoration: none;
+	outline: none;
+}
+
+/* background colors */
+.demo-2 { background: #fcdddd; }
+.demo-2 a { color: #700f11; }
+
+
+section {
+	padding: 1em;
+	text-align: center;
+}
+/* responsive utilities*/
+   
     .row {
       width: 100%;
     }
@@ -111,24 +43,15 @@
       float: left;
       padding: 15px;
     }
+    
     /* Basic styles */
     
     html,
     body {
-      overflow: scroll;
+      overflow-x: hidden;
+      min-height: 100%
     }
     
-    body {
-      font-family: 'Questrial', Arial;
-      font-size: 16px;
-      color: #c93937;
-      background-color: #f9f2f2;
-      border-top:none!important;
-    }
-    
-    .color {
-      color: #700f11;
-    }
     
     a {
       text-decoration: none;
@@ -145,6 +68,7 @@
       color: #700f11;
     }
     
+
     h1 {
       color: #c93937;
       font-family: 'Questrial', Arial;
@@ -180,12 +104,12 @@
     footer {
       position: absolute;
       bottom: 0;
+      left:0;
       width: 100%;
       z-index: -2;
-      background: url('footer-sito.svg');
+      background: url('../footer-sito.svg');
       background-size: 100%;
       background-repeat: no-repeat;
-      padding: 1em;
     }
     
     .footer-contact {
@@ -282,7 +206,7 @@
     }
     
     .card_circle {
-      background: url('img/CEO.jpg') no-repeat center bottom;
+      background: url('../img/CEO.jpg') no-repeat center bottom;
       background-color: #c93937;
       background-size: cover;
       border-radius: 50%;
@@ -294,7 +218,7 @@
     }
     
     .card_circle_1 {
-      background: url('img/WD.jpg') no-repeat center bottom;
+      background: url('../img/WD.jpg') no-repeat center bottom;
       background-color: #c93937;
       background-size: cover;
       border-radius: 50%;
@@ -348,13 +272,13 @@
     .team-1 {
       position: absolute;
       left: 5%;
-      top: 45%;
+      top: 55%;
     }
     
     .team-2 {
       position: absolute;
       right: 5%;
-      top: 45%;
+      top: 55%;
     }
     /* modal dialogs */
     
@@ -455,7 +379,7 @@
       font-weight: normal;
       position: absolute;
       pointer-events: none;
-      left: 65px;
+      left: 85px;
       top: 30px;
       transition: 0.2s ease all;
       -moz-transition: 0.2s ease all;
@@ -690,116 +614,9 @@
         top:190%;
       }
     }
-  </style>
-</head>
-
-<body layout="container">
-  <h1>Team</h1>
-  <div class="row" layout="container">
-    <div class="col-6 team-1">
-      <div class="card transition">
-        <h2 class="transition">Libero Camellini</h2>
-        <p>CEO and vintage broker, if you're interested in selling vintage products he's the right person.</p>
-        <div class="cta-container transition"><a on="tap:libero-contacts" role="button" tabindex="0" class="cta">Contact him</a></div>
-        <div class="card_circle transition"></div>
-      </div>
-    </div>
-    <div class="col-6 team-2">
-      <div class="card transition">
-        <h2 class="transition">Laura Camellini</h2>
-        <p>Web Designer as <a target="_blank" alt="blog" href="http://jeeltcraft.com">Jeeltcraft</a>. For hiring and reputation please see <a target="_blank" alt="marketplace" href="ttp://www.twago.com/p/demetratech/98968">twago</a>
-          <br />GPG encrypted mail are appreciated.
-        </p>
-        <div class="cta-container transition"><a on="tap:laura-contacts" role="button" tabindex="1" class="cta">Contact her</a></div>
-        <div class="card_circle_1 transition"></div>
-      </div>
-    </div>
-  </div>
-  <footer>
-    <div class="row">
-      <div class="col-6">
-        <p class="col-6 footer-contact" style="text-align:right; font-size:14px;">
-          <a href="#" alt="home">DEMETRATECH.EU</a>
-          <br />
-          <br /> Cap. Soc. 25.000 € i.v.
-          <br /> P.IVA IT03676410362
-          <br /> REA 408264
-        </p>
-        <p class="col-6 footer-contact" style="text-align:left;font-size:14px;border-left:1px solid #fff;">
-          SEDE LEGALE
-          <br />
-          <br /> 41013 Castelfranco Emilia, via Picchioni 7
-          <br /> Tel <a target="_blank" href="tel:+393482333564">+39 3482333564</a>, <a href="tel:+393403304676">+39 3403304676</a>
-          <br /> PEC <a target="_blank" href="mailto:demetratech@pec.confesercenti.it">demetratech@pec.confesercenti.it</a>
-        </p>
-      </div>
-      <div class="col-6 footer-tablet" layout="responsive">
-        <amp-img src="img/footer-tablet.svg" alt="extended logo" width=575 height=147 layout="responsive"></amp-img>
-      </div>
-    </div>
-  </footer>
-  <amp-lightbox id="libero-contacts" layout="nodisplay">
-    <div class="lightbox">
-      <h1>Send a Message to Libero</h1>
-      <form action="https://formspree.io/libmisty@demetratech.eu"  method="POST">
-    						<input type="text" name="name" class="input-1" required>
-    						<span class="bbar-1"></span>
-    						<label for="name" class="label-1">Name</label>
-    						<input type="email" name="_replyto" class="input-2" required>
-    						<span class="bbar-2"></span>
-    						<label for="email" class="label-2">Email</label>
-    						<textarea type="text" name="message" maxlength="10000" rows="10" required></textarea>
-    						<span class="bbar-3"></span>
-    						<label for="message" class="label-3">Message</label>
-    						<input type="submit" value="Send"class="submit-input">
-    						<br /><br /><br />
-					</form>
-      <div class="row" style="text-align:center;">
-        <a class="close" on="tap:libero-contacts.close" role="button" tabindex="0">X</a>
-      </div>
-    </div>
-  </amp-lightbox>
-  <amp-lightbox id="laura-contacts" layout="nodisplay">
-    <div class="lightbox">
-      <h1>Send a Message to Laura</h1>
-      <form action="https://formspree.io/jeeltcraft@demetratech.eu"  method="POST">
-    						<input type="text" name="name" class="input-1" required>
-    						<span class="bbar-1"></span>
-    						<label for="name" class="label-1">Name</label>
-    						<input type="email" name="_replyto" class="input-2" required>
-    						<span class="bbar-2"></span>
-    						<label for="email" class="label-2">Email</label>
-    						<textarea type="text" name="message" maxlength="10000" rows="10" required></textarea>
-    						<span class="bbar-3"></span>
-    						<label for="message" class="label-3">Message</label>
-    						<input type="submit" value="Send"class="submit-input">
-    						<br /><br /><br />
-					</form>
-      <div class="row" style="text-align:center;">
-        <a class="close" on="tap:laura-contacts.close" role="button" tabindex="1">X</a>
-      </div>
-    </div>
-  </amp-lightbox>
-      <amp-analytics type="googleanalytics" id="analytics4">
-            <script type="application/json">
-            { "vars": { 
-                "account": "UA-78444129-1" 
-            }, 
-                "triggers": { 
-                    "trackPageview": { 
-                        "on": "visible",
-                        "request": "pageview" 
-                },
-                "trackAnchorClicks": {
-                    "on": "click",
-                    "selector": "a",
-                    "request": "event",
-                    "vars": {
-                    "eventId": "contact-link",
-                    "eventLabel": "clicked on a contact link"
-                } } } }
-        </script>
-    </amp-analytics>
-</body>
-
-</html>
+    
+    .privacy {
+    	text-align:center;
+    	color:#c93937;
+    	margin:10px;
+    }

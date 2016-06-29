@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <link rel="canonical" href="http://demetratech.github.io/index.html" />
   <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
   <title>Demetratech - Web for the vintage world</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
   <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
@@ -78,7 +77,6 @@
       }
     </style>
   </noscript>
-  <script async src="https://cdn.ampproject.org/v0.js"></script>
   <style>
     /* responsive utilities */
           
@@ -109,6 +107,11 @@
     [class*="col-"] {
       float: left;
       padding: 15px;
+    }
+    
+    a {
+      color:#c93937;
+      text-decoration:none;
     }
     
     /* loader */
@@ -692,12 +695,6 @@
         './projects.html',
         false).start();
       addShowContainer('2');
-      new Viewer(
-        'container3',
-        '3',
-        './contact2.html',
-        false).start();
-      addShowContainer('3');
       showContainer('1');
     }
 
@@ -730,7 +727,7 @@
         <div class="menu-right col-6" layout="responsive" style="text-align:center;">
           <a class="show-container-anchor" id="show-container1-anchor">Home</a>
           <a class="show-container-anchor" id="show-container2-anchor">Projects</a>
-          <a class="show-container-anchor" id="show-container3-anchor">Contact</a>
+          <a class="show-container-anchor" href="contact.html" target="_top">Contact</a>
           <a id="visibilityToggle">Visible</a>
         </div>
       </div>
