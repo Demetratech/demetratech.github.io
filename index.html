@@ -695,6 +695,12 @@
         './projects.html',
         false).start();
       addShowContainer('2');
+      new Viewer(
+        'container3',
+        '3',
+        './contact2.html',
+        false).start();
+      addShowContainer('3');
       showContainer('1');
     }
 
@@ -727,7 +733,8 @@
         <div class="menu-right col-6" layout="responsive" style="text-align:center;">
           <a class="show-container-anchor" id="show-container1-anchor">Home</a>
           <a class="show-container-anchor" id="show-container2-anchor">Projects</a>
-          <a class="show-container-anchor" href="contact.html" target="_top">Contact</a>
+          <a style="display:none;" class="show-container-anchor" id="show-container3-anchor">Contacts</a>
+          <a class="show-container-anchor" href="contact.html" target="_top">Contacts</a>
           <a id="visibilityToggle">Visible</a>
         </div>
       </div>
