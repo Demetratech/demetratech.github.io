@@ -1,0 +1,55 @@
+/* Menu always shown css override, link this css file below style.css */
+
+#sidebar {
+  left: 0; width: 260px;
+  box-shadow:20px 0 0 rgba(150, 15, 17, 0.2)!important;
+  -webkit-box-shadow:20px 0 0 rgba(150, 15, 17, 0.2)!important;
+  -moz-box-shadow:20px 0 0 rgba(150, 15, 17, 0.2)!important;
+  -o-box-shadow:20px 0 0 rgba(150, 15, 17, 0.2)!important;
+  -ms-box-shadow:20px 0 0 rgba(150, 15, 17, 0.2)!important;
+}
+#sidebar #sidebar-trigger {
+  display: none;
+}
+.csstransforms #sidebar:hover,
+.csstransforms.touch #sidebar.sidebar-hover {
+  -webkit-transform: translateX(0)!important; 
+  -moz-transform: translateX(0)!important; 
+  -ms-transform: translateX(0)!important; 
+  -o-transform: translateX(0)!important; 
+  transform: translateX(0)!important; 
+}
+#sidebar:hover ~ #main-wrap #main,
+.touch #sidebar:hover ~ #main-wrap #main{
+-webkit-transform: none!important; 
+-moz-transform: none!important; 
+-ms-transform: none!important; 
+-o-transform: none!important; 
+transform: none!important; 
+}
+#sidebar ~ #main-wrap{
+  padding-left: 260px;
+}
+
+/* main slider */
+
+.galleria-counter {
+  display:none!important;
+}
+
+.galleria-image-nav {
+  display:none!important;
+}
+
+/* menu about */
+
+.about {
+  width: auto;
+  min-width: 220px;
+  padding: 0 20px 0 20px;
+  z-index: 9;
+  color:#c93937;
+  font-size:12px;
+  text-align:center;
+  text-transform: uppercase;
+}

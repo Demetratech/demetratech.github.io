@@ -1,1 +1,0 @@
-# demetratech.github.io
