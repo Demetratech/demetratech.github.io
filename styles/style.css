@@ -2526,3 +2526,7 @@ body{padding-top:0;}
 .color{
   color:#700f11;
 }
+
+.hidden {
+  display: none!important;
+}
